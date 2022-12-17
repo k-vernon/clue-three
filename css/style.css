@@ -56,31 +56,10 @@ body > div {
     align-items: center;
     justify-content: center;
     font-size: 50px;
-    margin: 0px 100px 0px 0px;
+    margin: 0px 700px 0px 0px;
 }
 
 
-
-#game-message {
-    display: flex;
-    background-color: aliceblue;
-    height: 100px;
-    width: 300px;
-    border: 1px solid black;
-    align-items: center;
-    justify-content:center;
-    font-size: 50px;
-    flex-direction: column;
-}
-
-#win-lose {
-    font-size: 40px;
-    padding: 0px 0px 15px 0px;
-}
-
-#win-lose-sub {
-    font-size: 20px;
-}
 
 #mid {
     display: flex;
@@ -122,20 +101,45 @@ body > div {
 #right {
     display: flex;
     width: 400px;
-    height: 400px;
+    height: 520px;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: rgb(213, 213, 213);
     
 }
 
+#game-message {
+    display: flex;
+    background-color: aliceblue;
+    height: 100px;
+    width: 300px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content:center;
+    font-size: 50px;
+    flex-direction: column;
+    align-self: center;
+    margin: 0px 0px 40px 0px;
+    padding: 60px 0px;
+}
+
+#win-lose {
+    font-size: 40px;
+    padding: 0px 0px 15px 0px;
+}
+
+#win-lose-sub {
+    font-size: 20px;
+}
+
 #unknown {
     display: flex;
-    height: 200px;
     width: 200px;
+    height: 230px;
     background-color: blue;
     align-self: center;
+    margin: 0px 0px 0px 0px;
 }
 
 #guess-button {
@@ -143,6 +147,8 @@ body > div {
     height: 50px;
     align-self: center;
     justify-content: center;
+    font-size: 25px;
+    font-weight: bolder;
 
 }
 /* #up-right {
