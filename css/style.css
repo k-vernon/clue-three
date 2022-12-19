@@ -90,7 +90,7 @@ body > div {
     align-items: center;
 }
 
-#character {
+.card {
     display: flex;
     background-color: rgb(230, 230, 230);
     border: 1px solid rgba(0, 0, 0, 0.1);

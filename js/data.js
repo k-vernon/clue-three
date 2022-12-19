@@ -1,4 +1,7 @@
-const pokemon = [
+// Amour, Ashley, Bella, Ember, Khalil, Olivia, Phoebe, Pierre, Tony, Zeke
+
+
+const characters = [
     { number: 1, name: "Amour", gender: "male", hair: "black", eyes:"green", glasses: false, facialHair: false, bald: false, jewelry: true},
     { number: 2, name: "Ashley", gender: "female", hair: "black", eyes:"blue", glasses: false, facialHair: false, bald: false, jewelry: true},
     { number: 3, name: "Bella", gender: "female", hair: "brown", eyes:"brown", glasses: false, facialHair: false, bald: false, jewelry: false},
@@ -13,5 +16,4 @@ const pokemon = [
 ]
 
 
-// number, name, gender, hair, eyes, glasses, mustache, bald, jewelry
-// Amour, Ashley, Bella, Ember, Khalil, Olivia, Phoebe, Pierre, Tony, Zeke
+export default characters
