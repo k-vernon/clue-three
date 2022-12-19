@@ -124,12 +124,12 @@ body > div {
     padding: 60px 0px;
 }
 
-#win-lose {
+#game-result {
     font-size: 40px;
     padding: 0px 0px 15px 0px;
 }
 
-#win-lose-sub {
+#sub-result {
     font-size: 20px;
 }
 
@@ -200,7 +200,7 @@ body > div {
 }
 
 
-#clue {
+.clue {
     display: flex;
     border: 1px solid rgba(0, 0, 0, 0.5);
     background-color: white;
