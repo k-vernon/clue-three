@@ -195,8 +195,6 @@ body > div {
     margin: 0px 0px 90px 0px;
     flex-direction: column;
     text-align: center;
-    
-    
 }
 
 
@@ -216,7 +214,6 @@ form {
     display: flex;
     flex-direction: row;
     padding: 2px;
-    
 }
 
 #input {

@@ -1,7 +1,7 @@
 
 
 /*-------------------------------- Constants --------------------------------*/
-const characters = [
+const charactersData = [
     { number: 1, name: "Amour", gender: "male", hair: "black", eyes:"green", glasses: false, facialHair: false, bald: false, jewelry: true},
     { number: 2, name: "Ashley", gender: "female", hair: "black", eyes:"blue", glasses: false, facialHair: false, bald: false, jewelry: true},
     { number: 3, name: "Bella", gender: "female", hair: "brown", eyes:"brown", glasses: false, facialHair: false, bald: false, jewelry: false},
@@ -19,40 +19,68 @@ const characters = [
 
 let winner = false
 let clues = 3
-let cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// let cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 /*------------------------ Cached Element References ------------------------*/
 
 const cardEls = document.querySelectorAll(".card")
-console.log(cardEls)
+// console.log(cardEls)
 const unknownEl = document.getElementById("unknown")
-console.log(unknownEl)
+// console.log(unknownEl)
 const messageEl = document.getElementById("game-result")
-console.log(messageEl)
+// console.log(messageEl)
 const subMessageEl = document.getElementById("sub-result")
-console.log(subMessageEl)
+// console.log(subMessageEl)
 const clueMessageEls = document.querySelectorAll(".clue")
-console.log(clueMessageEls)
+// console.log(clueMessageEls)
 const clueCountEl = document.getElementById("clue-count")
-console.log(clueCountEl)
+// console.log(clueCountEl)
 const inputEl = document.getElementById("input")
-console.log(inputEl)
+// console.log(inputEl)
 const submitButtonEl = document.getElementById("submit")
-console.log(submitButtonEl)
+// console.log(submitButtonEl)
 const guessButtonEl = document.getElementById("guess-button")
-console.log(guessButtonEl)
+// console.log(guessButtonEl)
 const instructsButtonEl = document.getElementById("instructions")
-console.log(instructsButtonEl)
+// console.log(instructsButtonEl)
 const resetButtonEl = document.getElementById("reset")
-console.log(reset)
+// console.log(resetButtonEl)
 
 
-
-  
 /*----------------------------- Event Listeners -----------------------------*/
 
-  
+  cardEls.forEach(function(card){
+    card.addEventListener("click", clickTest)
+  })
 
 
 /*-------------------------------- Functions --------------------------------*/
+
+function init() {
+    winner = false
+    clues = 3
+
+
+}
+
+function shuffleCharacters (chars){
+    let unshuffledChars = [...charactersData]
+    let shuffledChars = []
+
+    return shuffleChars
+
+}
+
+ function characterObjs (){
+    characters.forEach(function(character, charIdx){ 
+        // console.log(character)
+        // cardEls.forEach(function(card, cardIdx){
+        //     card[cardIdx] = character[charIdx]
+        // })    
+       cardEls[charIdx].textContent = character.name
+
+    });
+ }
+
+ characterObjs()
