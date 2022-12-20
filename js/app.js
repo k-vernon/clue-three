@@ -117,7 +117,7 @@ function reset(){
 
 
 function checkInput(){
-   if(inputEl.value.includes(`${unknownCharacter.hair}`) && inputEl.value.includes(``) && inputEl.value.includes("?")){
+   if(inputEl.value.includes(`${unknownCharacter.hair}`) && inputEl.value.includes(`${Object.keys(unknownCharacter)[3]}`) && inputEl.value.includes("?")){
     console.log("YES")
     } else
     console.log("NOPE")
