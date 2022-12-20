@@ -22,7 +22,7 @@ const charactersData = [
 let winner = false
 let clues = 3
 let shuffledCharacters
-let unknownChar
+let unknownCharacter
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -60,6 +60,8 @@ const resetButtonEl = document.getElementById("reset")
 
 resetButtonEl.addEventListener("click", reset)
 
+submitButtonEl.addEventListener("click", checkInput)
+
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -68,7 +70,7 @@ function init() {
     winner = false
     clues = 3
     shuffledCharacters = shuffleCharacters()
-    unknownChar = unknownCharPick()
+    unknownCharacter = unknownCharacterPick()
     render()
 }
 init()
@@ -98,21 +100,27 @@ function assignCards(){
     });
  }
 
-function unknownCharPick(){
+function unknownCharacterPick(){
     randomChar = Math.floor(Math.random() * shuffledCharacters.length)
-    unknownChar = shuffledCharacters[randomChar]
-    console.log(unknownChar)
-    return unknownChar
+    unknownCharacter = shuffledCharacters[randomChar]
+    return unknownCharacter
 }
 
 
 function assignUnknownCard(){
-    console.log(unknownChar)
-    unknownEl.textContent = unknownChar.name
+    unknownEl.textContent = unknownCharacter.name
 }
 
 function reset(){
     init()
+}
+
+
+function checkInput(){
+   if(inputEl.value.includes(`${unknownCharacter.hair}`) && inputEl.value.includes(``) && inputEl.value.includes("?")){
+    console.log("YES")
+    } else
+    console.log("NOPE")
 }
 
 
