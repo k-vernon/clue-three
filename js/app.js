@@ -58,9 +58,9 @@ const resetButtonEl = document.getElementById("reset")
   })
 
 
+resetButtonEl.addEventListener("click", reset)
 
 
-  
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -78,16 +78,6 @@ function render(){
     assignUnknownCard()
 }
 
-// function shuffleCharacters(){
-//     let unshuffledChars = [...charactersData]
-//     let shuffledChars = []
-//     unshuffledChars.forEach(function(){
-//         randomIndex = Math.floor(Math.random() * unshuffledChars.length)
-//         shuffledChars.push(unshuffledChars[randomIndex])
-//         unshuffledChars.splice(randomIndex, 1)
-//     })
-//     return shuffledChars
-// }
 
 function shuffleCharacters(){
     let unshuffledChars = [...charactersData]
@@ -121,11 +111,9 @@ function assignUnknownCard(){
     unknownEl.textContent = unknownChar.name
 }
 
-function clueInput(){
-
+function reset(){
+    init()
 }
-
-
 
 
 
