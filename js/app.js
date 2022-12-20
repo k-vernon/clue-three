@@ -117,10 +117,21 @@ function reset(){
 
 
 function checkInput(){
-   if(inputEl.value.includes(`${unknownCharacter.hair}`) && inputEl.value.includes(`${Object.keys(unknownCharacter)[3]}`) && inputEl.value.includes("?")){
+    if (inputEl.value.includes(`${unknownCharacter.gender}`) && inputEl.value.includes(`${Object.keys(unknownCharacter)[2]}`) && inputEl.value.includes("?")){
+    console.log("YES")
+    } else if (inputEl.value.includes(`${unknownCharacter.hair}`) && inputEl.value.includes(`${Object.keys(unknownCharacter)[3]}`) && inputEl.value.includes("?")){
+    console.log("YES")
+    } else if (inputEl.value.includes(`${unknownCharacter.eyes}`) && inputEl.value.includes(`${Object.keys(unknownCharacter)[4]}`) && inputEl.value.includes("?")){
+    console.log("YES")
+    } else if (inputEl.value.includes(`${unknownCharacter.glasses}`) && inputEl.value.includes(`${Object.keys(unknownCharacter)[5]}`) && inputEl.value.includes("?")){
+    console.log("YES")
+    } else if (inputEl.value.includes(`${unknownCharacter.facialHair}`) && inputEl.value.includes(`${Object.keys(unknownCharacter)[6]}`) && inputEl.value.includes("?")){
     console.log("YES")
     } else
+
     console.log("NOPE")
+
+    
 }
 
 
