@@ -20,6 +20,7 @@ const charactersData = [
 let winner = false
 let clues = 3
 // let cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let randomCharacters 
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -51,7 +52,7 @@ const resetButtonEl = document.getElementById("reset")
 /*----------------------------- Event Listeners -----------------------------*/
 
   cardEls.forEach(function(card){
-    card.addEventListener("click", clickTest)
+    card.addEventListener("click", console.log)
   })
 
 
@@ -60,27 +61,41 @@ const resetButtonEl = document.getElementById("reset")
 function init() {
     winner = false
     clues = 3
+    randomCharacters = shuffleCharacters()
+    render()
+}
+init()
 
+function render(){
+    characterObjs()
 
 }
 
-function shuffleCharacters (chars){
+
+
+function shuffleCharacters(){
     let unshuffledChars = [...charactersData]
     let shuffledChars = []
-
-    return shuffleChars
-
+    unshuffledChars.forEach(function(char){
+        randomIndex = Math.floor(Math.random() * unshuffledChars.length)
+        shuffledChars.push(unshuffledChars[randomIndex])
+    })
+    console.log(shuffledChars)
+    return shuffledChars
 }
 
- function characterObjs (){
-    characters.forEach(function(character, charIdx){ 
-        // console.log(character)
-        // cardEls.forEach(function(card, cardIdx){
-        //     card[cardIdx] = character[charIdx]
-        // })    
-       cardEls[charIdx].textContent = character.name
 
+ function characterObjs(){
+    randomCharacters.forEach(function(character, charIdx){ 
+       cardEls[charIdx].textContent = character.name
+        console.log()
     });
  }
 
- characterObjs()
+ 
+function unknownCharPick(){
+    
+}
+
+
+ 
