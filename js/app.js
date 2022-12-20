@@ -28,27 +28,27 @@ let unknownChar
 /*------------------------ Cached Element References ------------------------*/
 
 const cardEls = document.querySelectorAll(".card")
-// console.log(cardEls)
+
 const unknownEl = document.getElementById("unknown")
-// console.log(unknownEl)
+
 const messageEl = document.getElementById("game-result")
-// console.log(messageEl)
+
 const subMessageEl = document.getElementById("sub-result")
-// console.log(subMessageEl)
+
 const clueMessageEls = document.querySelectorAll(".clue")
-// console.log(clueMessageEls)
+
 const clueCountEl = document.getElementById("clue-count")
-// console.log(clueCountEl)
+
 const inputEl = document.getElementById("input")
-// console.log(inputEl)
+
 const submitButtonEl = document.getElementById("submit")
-// console.log(submitButtonEl)
+
 const guessButtonEl = document.getElementById("guess-button")
-// console.log(guessButtonEl)
+
 const instructsButtonEl = document.getElementById("instructions")
-// console.log(instructsButtonEl)
+
 const resetButtonEl = document.getElementById("reset")
-// console.log(resetButtonEl)
+
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -57,6 +57,10 @@ const resetButtonEl = document.getElementById("reset")
     card.addEventListener("click", console.log)
   })
 
+
+
+
+  
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -71,21 +75,33 @@ init()
 
 function render(){
     assignCards()
+    assignUnknownCard()
 }
+
+// function shuffleCharacters(){
+//     let unshuffledChars = [...charactersData]
+//     let shuffledChars = []
+//     unshuffledChars.forEach(function(){
+//         randomIndex = Math.floor(Math.random() * unshuffledChars.length)
+//         shuffledChars.push(unshuffledChars[randomIndex])
+//         unshuffledChars.splice(randomIndex, 1)
+//     })
+//     return shuffledChars
+// }
 
 function shuffleCharacters(){
     let unshuffledChars = [...charactersData]
+    let numToShuffle = unshuffledChars.length
     let shuffledChars = []
-    unshuffledChars.forEach(function(){
+    for (let i = 0; i < numToShuffle; i++){
         randomIndex = Math.floor(Math.random() * unshuffledChars.length)
-        shuffledChars.push(unshuffledChars[randomIndex]) 
-
-    })
-
+        shuffledChars.push(unshuffledChars[randomIndex])
+        unshuffledChars.splice(randomIndex, 1)
+    }
     return shuffledChars
 }
 
- function assignCards(){
+function assignCards(){
     shuffledCharacters.forEach(function(character, charIdx){ 
        cardEls[charIdx].textContent = character.name
         console.log()
@@ -105,7 +121,11 @@ function assignUnknownCard(){
     unknownEl.textContent = unknownChar.name
 }
 
-assignUnknownCard()
+function clueInput(){
+
+}
+
+
 
 
 
