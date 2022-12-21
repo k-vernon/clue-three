@@ -25,6 +25,7 @@ let shuffledCharacters
 let unknownCharacter
 
 
+
 /*------------------------ Cached Element References ------------------------*/
 
 const cardEls = document.querySelectorAll(".card")
@@ -61,8 +62,6 @@ const resetButtonEl = document.getElementById("reset")
 resetButtonEl.addEventListener("click", reset)
 
 submitButtonEl.addEventListener("click", checkInput)
-
-
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -116,18 +115,31 @@ function reset(){
     init()
 }
 
+// function clueCount(){
+//     clueCountEl.textContent = clues
+//     if (clueMessageEls.textContent === ""){
+//         clues = 3
+//     } else if (clueMessageEls[0].textContent !== ""){
+//         clues = 2
+//     } else if (clueMessageEls[1].textContent !== ""){
+//         clues = 1
+//     } else if (clueMessageEls[2].textContent !== ""){
+//         clues = 0 
+//     }
+// }
+
+
+
 function clueCount(){
-    let clueNum = clueCountEl.textContent = clues
-    if (clueMessageEls.textContent === ""){
-        clueNum = 3
-    } else if (clueMessageEls[0].textContent !== ""){
+    let clueNum = 3
+    
+    if (clueMessageEls[0].textContent === "hey"){
         clueNum = 2
-    } else if (clueMessageEls[1].textContent !== ""){
-        clueNum = 1
-    } else if (clueMessageEls[2].textContent !== ""){
-        clueNum = 0 
     }
+    clueCountEl.textContent = clueNum
 }
+
+
 
 console.log(clues)
 console.log(clueCountEl.textContent)
