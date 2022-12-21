@@ -59,14 +59,14 @@ const resetButtonEl = document.getElementById("reset")
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-  cardEls.forEach(function(card){
+cardEls.forEach(function(card){
     card.addEventListener("click", console.log)
-  })
-
+})
 
 resetButtonEl.addEventListener("click", reset)
-
 submitButtonEl.addEventListener("click", submitHandleClick)
+guessButtonEl.addEventListener("click", guessName)
+
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -127,6 +127,7 @@ function clueCount(){
         clues = 1
     } else {
         clues = 0
+        guessName()
     }
     clueCountEl.textContent = clues
 }
@@ -213,4 +214,9 @@ function checkFormat(){
 
 }
 
+function guessName(){
+    inputEl.disabled = true
+    inputEl.style.cursor = "not-allowed"
 
+
+}
