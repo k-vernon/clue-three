@@ -63,7 +63,7 @@ const resetButtonEl = document.getElementById("reset")
 
 resetButtonEl.addEventListener("click", reset)
 
-submitButtonEl.addEventListener("click", checkInput)
+submitButtonEl.addEventListener("click", submitHandleClick)
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -79,7 +79,6 @@ init()
 function render(){
     assignCards()
     assignUnknownCard()
-    clueCount()
 }
 
 
@@ -131,6 +130,10 @@ function clueCount(){
     clueCountEl.textContent = clues
 }
 
+function submitHandleClick(){
+    checkInput()
+    clueCount()
+}
 
 function checkInput(){
     if (unknownCharacter.bald === false && inputEl.value.includes(unknownCharacter.gender) && inputEl.value.includes(`${Object.keys(unknownCharacter)[2]}`) && inputEl.value.includes("?")){
