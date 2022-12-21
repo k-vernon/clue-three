@@ -226,6 +226,10 @@ form {
     position: absolute;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    opacity: 50%;
     
 }
 
