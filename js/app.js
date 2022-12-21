@@ -40,6 +40,8 @@ const clueMessageEls = document.querySelectorAll(".clue")
 
 const clueCountEl = document.getElementById("clue-count")
 
+const invalidEl = document.getElementById("invalid")
+
 const inputEl = document.getElementById("input")
 
 const submitButtonEl = document.getElementById("submit")
@@ -115,51 +117,24 @@ function reset(){
     init()
 }
 
-// function clueCount(){
-//     clueCountEl.textContent = clues
-//     if (clueMessageEls.textContent === ""){
-//         clues = 3
-//     } else if (clueMessageEls[0].textContent !== ""){
-//         clues = 2
-//     } else if (clueMessageEls[1].textContent !== ""){
-//         clues = 1
-//     } else if (clueMessageEls[2].textContent !== ""){
-//         clues = 0 
-//     }
-// }
-
-
 
 function clueCount(){
     if (clueMessageEls[0].textContent === ""){
-        console.log("make clue 3")
         clues = 3
     } else if (clueMessageEls[0].textContent !== "" && clueMessageEls[1].textContent === ""){
-        console.log("make clue 2")
         clues = 2
     } else if (clueMessageEls[1].textContent !== "" && clueMessageEls[2].textContent === ""){
-        console.log("make clue 1")
         clues = 1
     } else {
         clues = 0
-        console.log("make clue 0")
     }
     clueCountEl.textContent = clues
 }
 
 
-
-console.log(clues)
-console.log(clueCountEl.textContent)
-console.log(clueMessageEls[0].textContent)
-
-
-
-
 function checkInput(){
     if (unknownCharacter.bald === false && inputEl.value.includes(unknownCharacter.gender) && inputEl.value.includes(`${Object.keys(unknownCharacter)[2]}`) && inputEl.value.includes("?")){
-        messageEl
-        
+    console.log("YES")
     } else if (inputEl.value.includes(unknownCharacter.hair) && inputEl.value.includes(`${Object.keys(unknownCharacter)[3]}`) && inputEl.value.includes("?")){
     console.log("YES")
     } else if (inputEl.value.includes(unknownCharacter.eyes) && inputEl.value.includes(`${Object.keys(unknownCharacter)[4]}`) && inputEl.value.includes("?")){
@@ -173,11 +148,15 @@ function checkInput(){
     } else if ((inputEl.value.includes(`${Object.keys(unknownCharacter)[8]}`) && unknownCharacter.jewelry === true && inputEl.value.includes("?"))){
     console.log("YES")
     } else 
-
+    checkFormat()
     console.log("NOPE")
 }
 
-console.log(unknownCharacter.jewelry)
-console.log(Object.keys(unknownCharacter)[8])
+function checkFormat(){
+    if (!inputEl.value.includes("?")){
+        invalidEl.textContent = `Invalid input. Must include "?"`
+        console.log("ADD UR Q MARK")
+    }
+}
 
 

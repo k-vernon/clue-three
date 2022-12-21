@@ -171,6 +171,7 @@ body > div {
     align-items: left;
 }
 
+
 #count-box {
     display: flex;
     background-color: white;
@@ -216,11 +217,23 @@ form {
     padding: 2px;
 }
 
+#invalid {
+    display: flex;
+    height: 50px;
+    width: 200px;
+    margin-top: 17px;
+    margin-left: 30px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 #input {
     display: flex;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 0px;
-    width: 50px;
+    width: 0px;
     height: 40px;
     margin: 25px 0px 10px 255px;
     justify-content: end;
