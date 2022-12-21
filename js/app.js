@@ -136,23 +136,63 @@ function submitHandleClick(){
 }
 
 function checkInput(){
-    if (unknownCharacter.bald === false && inputEl.value.includes(unknownCharacter.gender) && inputEl.value.includes(`${Object.keys(unknownCharacter)[2]}`) && inputEl.value.includes("?")){
+    if (inputEl.value.includes(unknownCharacter.gender) && inputEl.value.includes(`${Object.keys(unknownCharacter)[2]}`) && inputEl.value.includes("?")){
         if (clues === 3){
-        clueMessageEls[0].textContent = `This question is true: ${inputEl.value}`
-        console.log("YES")
+        clueMessageEls[0].textContent = `${inputEl.value} YES`
+        } else if (clues === 2){
+            clueMessageEls[1].textContent = `${inputEl.value} YES`
+        } else if (clues === 1){
+            clueMessageEls[2].textContent = `${inputEl.value} YES`
         }
-    } else if (inputEl.value.includes(unknownCharacter.hair) && inputEl.value.includes(`${Object.keys(unknownCharacter)[3]}`) && inputEl.value.includes("?")){
-    console.log("YES")
+    } else if (unknownCharacter.bald === false && inputEl.value.includes(unknownCharacter.hair) && inputEl.value.includes(`${Object.keys(unknownCharacter)[3]}`) && inputEl.value.includes("?")){
+        if (clues === 3){
+        clueMessageEls[0].textContent = `${inputEl.value} YES`
+        } else if (clues === 2){
+            clueMessageEls[1].textContent = `${inputEl.value} YES`
+        } else if (clues === 1){
+            clueMessageEls[2].textContent = `${inputEl.value} YES`
+        }
     } else if (inputEl.value.includes(unknownCharacter.eyes) && inputEl.value.includes(`${Object.keys(unknownCharacter)[4]}`) && inputEl.value.includes("?")){
-    console.log("YES")
+        if (clues === 3){
+        clueMessageEls[0].textContent = `${inputEl.value} YES`
+        } else if (clues === 2){
+            clueMessageEls[1].textContent = `${inputEl.value} YES`
+        } else if (clues === 1){
+            clueMessageEls[2].textContent = `${inputEl.value} YES`
+        }
     } else if (inputEl.value.includes(`${Object.keys(unknownCharacter)[5]}`) && unknownCharacter.glasses === true && inputEl.value.includes("?")){
-    console.log("YES")
+        if (clues === 3){
+        clueMessageEls[0].textContent = `${inputEl.value} YES`
+        } else if (clues === 2){
+            clueMessageEls[1].textContent = `${inputEl.value} YES`
+        } else if (clues === 1){
+            clueMessageEls[2].textContent = `${inputEl.value} YES`
+        }
     } else if (inputEl.value.includes("facial hair") && unknownCharacter.facialHair === true && inputEl.value.includes("?")){
-    console.log("YES")
+        if (clues === 3){
+        clueMessageEls[0].textContent = `${inputEl.value} YES`
+        } else if (clues === 2){
+            clueMessageEls[1].textContent = `${inputEl.value} YES`
+        } else if (clues === 1){
+            clueMessageEls[2].textContent = `${inputEl.value} YES`
+        }
     } else if ((inputEl.value.includes(`${Object.keys(unknownCharacter)[7]}`) && unknownCharacter.bald === true && inputEl.value.includes("?"))){
-    console.log("YES")
+        if (clues === 3){
+        clueMessageEls[0].textContent = `${inputEl.value} YES`
+        console.log("YES")
+        } else if (clues === 2){
+        clueMessageEls[1].textContent = `${inputEl.value} YES`
+        } else if (clues === 1){
+        clueMessageEls[2].textContent = `${inputEl.value} YES`
+        }
     } else if ((inputEl.value.includes(`${Object.keys(unknownCharacter)[8]}`) && unknownCharacter.jewelry === true && inputEl.value.includes("?"))){
-    console.log("YES")
+        if (clues === 3){
+        clueMessageEls[0].textContent = `${inputEl.value} YES`
+        } else if (clues === 2){
+        clueMessageEls[1].textContent = `${inputEl.value} YES`
+        } else if (clues === 1){
+        clueMessageEls[2].textContent = `${inputEl.value} YES`
+        }
     } else 
     checkFormat()
     console.log("NOPE")
@@ -162,7 +202,7 @@ function checkFormat(){
     if (!inputEl.value.includes("?")){
         invalidEl.textContent = `Invalid input. Must include "?"`
     } else {
-        clueMessageEls[0].textContent = `This question is false: ${inputEl.value}`
+        clueMessageEls[0].textContent = `${inputEl.value} NO`
 
     }
 
