@@ -131,18 +131,24 @@ function reset(){
 
 
 function clueCount(){
-    let clueNum = 3
-    
-    if (clueMessageEls[0].textContent === "hey"){
-        clueNum = 2
+    if (clueMessageEls[0].textContent === "" && clueMessageEls[1].textContent === "" && clueMessageEls[2].textContent === ""){
+        clues = 3
     }
-    clueCountEl.textContent = clueNum
+    // } else if (clueMessageEls[0].textContent !== "" ){
+    //     clues = 2
+    // } else if (clueMessageEls[1].textContent !== ""){
+    //     clues = 1 
+    // } else if (clueMessageEls[2].textContent !== ""){
+    //     clues = 0 
+    // } 
+    clueCountEl.textContent = clues
 }
 
 
 
 console.log(clues)
 console.log(clueCountEl.textContent)
+console.log(clueMessageEls[0].textContent)
 
 
 
