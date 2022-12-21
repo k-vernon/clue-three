@@ -115,10 +115,14 @@ function reset(){
     init()
 }
 
+function clueCount(){
+    clueCountEl.textContent = clues
+}
+
 
 function checkInput(){
-    if (inputEl.value.includes(unknownCharacter.gender) && inputEl.value.includes(`${Object.keys(unknownCharacter)[2]}`) && inputEl.value.includes("?")){
-    console.log("YES")
+    if (unknownCharacter.bald === false && inputEl.value.includes(unknownCharacter.gender) && inputEl.value.includes(`${Object.keys(unknownCharacter)[2]}`) && inputEl.value.includes("?")){
+       
     } else if (inputEl.value.includes(unknownCharacter.hair) && inputEl.value.includes(`${Object.keys(unknownCharacter)[3]}`) && inputEl.value.includes("?")){
     console.log("YES")
     } else if (inputEl.value.includes(unknownCharacter.eyes) && inputEl.value.includes(`${Object.keys(unknownCharacter)[4]}`) && inputEl.value.includes("?")){
@@ -129,14 +133,14 @@ function checkInput(){
     console.log("YES")
     } else if ((inputEl.value.includes(`${Object.keys(unknownCharacter)[7]}`) && unknownCharacter.bald === true && inputEl.value.includes("?"))){
     console.log("YES")
-    } else
+    } else if ((inputEl.value.includes(`${Object.keys(unknownCharacter)[8]}`) && unknownCharacter.jewelry === true && inputEl.value.includes("?"))){
+    console.log("YES")
+    } else 
 
     console.log("NOPE")
-    
-    
 }
 
-console.log(unknownCharacter.bald)
-console.log(Object.keys(unknownCharacter)[6])
+console.log(unknownCharacter.jewelry)
+console.log(Object.keys(unknownCharacter)[8])
 
 
