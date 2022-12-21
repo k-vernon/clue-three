@@ -134,7 +134,10 @@ function clueCount(){
 
 function checkInput(){
     if (unknownCharacter.bald === false && inputEl.value.includes(unknownCharacter.gender) && inputEl.value.includes(`${Object.keys(unknownCharacter)[2]}`) && inputEl.value.includes("?")){
-    console.log("YES")
+        if (clues === 3){
+        clueMessageEls[0].textContent = `This question is true: ${inputEl.value}`
+        console.log("YES")
+        }
     } else if (inputEl.value.includes(unknownCharacter.hair) && inputEl.value.includes(`${Object.keys(unknownCharacter)[3]}`) && inputEl.value.includes("?")){
     console.log("YES")
     } else if (inputEl.value.includes(unknownCharacter.eyes) && inputEl.value.includes(`${Object.keys(unknownCharacter)[4]}`) && inputEl.value.includes("?")){
@@ -155,8 +158,11 @@ function checkInput(){
 function checkFormat(){
     if (!inputEl.value.includes("?")){
         invalidEl.textContent = `Invalid input. Must include "?"`
-        console.log("ADD UR Q MARK")
+    } else {
+        clueMessageEls[0].textContent = `This question is false: ${inputEl.value}`
+
     }
+
 }
 
 
