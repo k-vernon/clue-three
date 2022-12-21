@@ -123,18 +123,20 @@ function checkInput(){
     console.log("YES")
     } else if (inputEl.value.includes(unknownCharacter.eyes) && inputEl.value.includes(`${Object.keys(unknownCharacter)[4]}`) && inputEl.value.includes("?")){
     console.log("YES")
-    // } else if (inputEl.value.includes(unknownCharacter.glasses) && inputEl.value.includes(`${Object.keys(unknownCharacter)[5]}`) && inputEl.value.includes("?")){
-    // console.log("YES")
     } else if (inputEl.value.includes(`${Object.keys(unknownCharacter)[5]}`) && unknownCharacter.glasses === true && inputEl.value.includes("?")){
     console.log("YES")
-    } else if ()
+    } else if (inputEl.value.includes("facial hair") && unknownCharacter.facialHair === true && inputEl.value.includes("?")){
+    console.log("YES")
+    } else if ((inputEl.value.includes(`${Object.keys(unknownCharacter)[7]}`) && unknownCharacter.bald === true && inputEl.value.includes("?"))){
+    console.log("YES")
+    } else
 
     console.log("NOPE")
     
     
 }
 
-console.log(unknownCharacter.glasses)
-console.log(Object.keys(unknownCharacter)[5])
+console.log(unknownCharacter.bald)
+console.log(Object.keys(unknownCharacter)[6])
 
 
