@@ -16,8 +16,9 @@ const charactersData = [
 ]
 
 const characterKeys = ['name', 'gender', 'hair', 'eyes', 'glasses', 'facialHair', 'bald', 'jewelry'] 
-const characterNames = ['Amour']
-console.log()
+const characterNames = ['Amour', 'Ashley', 'Bella', 'Ember', 'Khalil', 'Olivia', 'Phoebe', 'Pierre', 'Tony', 'Zeke']
+
+
 
 /*---------------------------- Variables (state) ----------------------------*/
 
