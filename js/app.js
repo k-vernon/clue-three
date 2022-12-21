@@ -3,14 +3,14 @@
 /*-------------------------------- Constants --------------------------------*/
 const charactersData = [
     { number: 1, name: "Amour", gender: "male", hair: "black", eyes:"green", glasses: false, facialHair: false, bald: false, jewelry: true},
-    { number: 2, name: "Ashley", gender: "female", hair: "black", eyes:"blue", glasses: false, facialHair: false, bald: false, jewelry: true},
+    { number: 2, name: "Ashley", gender: "girl", hair: "black", eyes:"blue", glasses: false, facialHair: false, bald: false, jewelry: true},
     { number: 3, name: "Bella", gender: "female", hair: "brown", eyes:"brown", glasses: false, facialHair: false, bald: false, jewelry: false},
     { number: 4, name: "Ember", gender: "female", hair: "red", eyes:"green", glasses: false, facialHair: false, bald: false, jewelry: true},
     { number: 5, name: "Khalil", gender: "male", hair: "black", eyes:"brown", glasses: false, facialHair: false, bald: false, jewelry: false},
-    { number: 6, name: "Olivia", gender: "female", hair: "brown", eyes:"blue", glasses: true, facialHair: false, bald: false, jewelry: false},
+    { number: 6, name: "Olivia", gender: "girl", hair: "brown", eyes:"blue", glasses: true, facialHair: false, bald: false, jewelry: false},
     { number: 7, name: "Phoebe", gender: "female", hair: "blonde", eyes:"blue", glasses: false, facialHair: false, bald: false, jewelry: false},
-    { number: 8, name: "Pierre", gender: "male", hair: "blonde", eyes:"blue", glasses: false, facialHair: true, bald: false, jewelry: false},
-    { number: 9, name: "Tony", gender: "male", hair: "black", eyes:"brown", glasses: true, facialHair: false, bald: false, jewelry: false},
+    { number: 8, name: "Pierre", gender: "guy", hair: "blonde", eyes:"blue", glasses: false, facialHair: true, bald: false, jewelry: false},
+    { number: 9, name: "Tony", gender: "guy", hair: "black", eyes:"brown", glasses: true, facialHair: false, bald: false, jewelry: false},
     { number: 10, name: "Zeke", gender: "male", hair: false, eyes:"green", glasses: false, facialHair: true, bald: true, jewelry: true}
  
 ]
@@ -73,6 +73,7 @@ function init() {
     shuffledCharacters = shuffleCharacters()
     unknownCharacter = unknownCharacterPick()
     render()
+    clueCount()
 }
 init()
 
@@ -137,6 +138,7 @@ function submitHandleClick(){
 
 function checkInput(){
     if (inputEl.value.includes(unknownCharacter.gender) && inputEl.value.includes(`${Object.keys(unknownCharacter)[2]}`) && inputEl.value.includes("?")){
+        console.log("It includes this")
         if (clues === 3){
         clueMessageEls[0].textContent = `${inputEl.value} YES`
         } else if (clues === 2){
@@ -176,7 +178,7 @@ function checkInput(){
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES`
         }
-    } else if ((inputEl.value.includes(`${Object.keys(unknownCharacter)[7]}`) && unknownCharacter.bald === true && inputEl.value.includes("?"))){
+    } else if (inputEl.value.includes(`${Object.keys(unknownCharacter)[7]}`) && unknownCharacter.bald === true && inputEl.value.includes("?")){
         if (clues === 3){
         clueMessageEls[0].textContent = `${inputEl.value} YES`
         console.log("YES")
@@ -185,7 +187,7 @@ function checkInput(){
         } else if (clues === 1){
         clueMessageEls[2].textContent = `${inputEl.value} YES`
         }
-    } else if ((inputEl.value.includes(`${Object.keys(unknownCharacter)[8]}`) && unknownCharacter.jewelry === true && inputEl.value.includes("?"))){
+    } else if (inputEl.value.includes(`${Object.keys(unknownCharacter)[8]}`) && unknownCharacter.jewelry === true && inputEl.value.includes("?")){
         if (clues === 3){
         clueMessageEls[0].textContent = `${inputEl.value} YES`
         } else if (clues === 2){
@@ -193,16 +195,22 @@ function checkInput(){
         } else if (clues === 1){
         clueMessageEls[2].textContent = `${inputEl.value} YES`
         }
-    } else 
-    checkFormat()
-    console.log("NOPE")
+    } else {
+        checkFormat()
+        console.log("NOPE")
+
+    }
 }
+
+console.log(unknownCharacter.gender)
+
+
 
 function checkFormat(){
     if (!inputEl.value.includes("?")){
         invalidEl.textContent = `Invalid input. Must include "?"`
-    } else if (!inputEl.value.includes(Object.keys)){
-        invalidEl.textContent = `Invalid input. Must include a valid trait`
+    // } else if (!inputEl.value.includes("hey")){
+    //     invalidEl.textContent = `Invalid input. Must include a valid trait`
     } else {
         clueMessageEls[0].textContent = `${inputEl.value} NO`
     }
