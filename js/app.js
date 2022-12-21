@@ -78,6 +78,7 @@ init()
 function render(){
     assignCards()
     assignUnknownCard()
+    clueCount()
 }
 
 
@@ -116,13 +117,28 @@ function reset(){
 }
 
 function clueCount(){
-    clueCountEl.textContent = clues
+    let clueNum = clueCountEl.textContent = clues
+    if (clueMessageEls.textContent === ""){
+        clueNum = 3
+    } else if (clueMessageEls[0].textContent !== ""){
+        clueNum = 2
+    } else if (clueMessageEls[1].textContent !== ""){
+        clueNum = 1
+    } else if (clueMessageEls[2].textContent !== ""){
+        clueNum = 0 
+    }
 }
+
+console.log(clues)
+console.log(clueCountEl.textContent)
+
+
 
 
 function checkInput(){
     if (unknownCharacter.bald === false && inputEl.value.includes(unknownCharacter.gender) && inputEl.value.includes(`${Object.keys(unknownCharacter)[2]}`) && inputEl.value.includes("?")){
-       
+        messageEl
+        
     } else if (inputEl.value.includes(unknownCharacter.hair) && inputEl.value.includes(`${Object.keys(unknownCharacter)[3]}`) && inputEl.value.includes("?")){
     console.log("YES")
     } else if (inputEl.value.includes(unknownCharacter.eyes) && inputEl.value.includes(`${Object.keys(unknownCharacter)[4]}`) && inputEl.value.includes("?")){
