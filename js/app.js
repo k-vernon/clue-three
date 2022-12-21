@@ -201,9 +201,10 @@ function checkInput(){
 function checkFormat(){
     if (!inputEl.value.includes("?")){
         invalidEl.textContent = `Invalid input. Must include "?"`
+    } else if (!inputEl.value.includes(Object.keys)){
+        invalidEl.textContent = `Invalid input. Must include a valid trait`
     } else {
         clueMessageEls[0].textContent = `${inputEl.value} NO`
-
     }
 
 }
