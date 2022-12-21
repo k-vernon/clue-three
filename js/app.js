@@ -131,16 +131,19 @@ function reset(){
 
 
 function clueCount(){
-    if (clueMessageEls[0].textContent === "" && clueMessageEls[1].textContent === "" && clueMessageEls[2].textContent === ""){
+    if (clueMessageEls[0].textContent === ""){
+        console.log("make clue 3")
         clues = 3
+    } else if (clueMessageEls[0].textContent !== "" && clueMessageEls[1].textContent === ""){
+        console.log("make clue 2")
+        clues = 2
+    } else if (clueMessageEls[1].textContent !== "" && clueMessageEls[2].textContent === ""){
+        console.log("make clue 1")
+        clues = 1
+    } else {
+        clues = 0
+        console.log("make clue 0")
     }
-    // } else if (clueMessageEls[0].textContent !== "" ){
-    //     clues = 2
-    // } else if (clueMessageEls[1].textContent !== ""){
-    //     clues = 1 
-    // } else if (clueMessageEls[2].textContent !== ""){
-    //     clues = 0 
-    // } 
     clueCountEl.textContent = clues
 }
 
