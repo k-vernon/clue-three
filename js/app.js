@@ -70,7 +70,7 @@ submitButtonEl.addEventListener("click", submitHandleClick)
 
 /*-------------------------------- Functions --------------------------------*/
 
-function init() {
+function init(){
     winner = false
     clues = 3
     shuffledCharacters = shuffleCharacters()
@@ -84,7 +84,6 @@ function render(){
     assignCards()
     assignUnknownCard()
 }
-
 
 function shuffleCharacters(){
     let unshuffledChars = [...charactersData]
@@ -103,14 +102,13 @@ function assignCards(){
        cardEls[charIdx].textContent = character.name
         console.log()
     });
- }
+}
 
 function unknownCharacterPick(){
     randomChar = Math.floor(Math.random() * shuffledCharacters.length)
     unknownCharacter = shuffledCharacters[randomChar]
     return unknownCharacter
 }
-
 
 function assignUnknownCard(){
     unknownEl.textContent = unknownCharacter.name
@@ -119,7 +117,6 @@ function assignUnknownCard(){
 function reset(){
     init()
 }
-
 
 function clueCount(){
     if (clueMessageEls[0].textContent === ""){
@@ -204,10 +201,6 @@ function checkInput(){
 
     }
 }
-
-console.log(unknownCharacter.gender)
-
-
 
 function checkFormat(){
     if (!inputEl.value.includes("?")){
