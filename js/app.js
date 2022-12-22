@@ -137,7 +137,7 @@ function clueCount(){
 function submitHandleClick(){
     checkInput()
     clueCount()
-    invalidEl.value = ''
+    removeInputValue()
 
 }
 
@@ -268,3 +268,13 @@ function checkGuessInput (){
 }
 
 
+function removeInvalidText(){
+    if ("hey"){
+        invalidEl.textContent = ''
+
+    }
+}
+
+function removeInputValue(){
+    inputEl.value = ''
+}
