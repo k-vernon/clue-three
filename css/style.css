@@ -352,6 +352,7 @@ form {
     left: -1000px;
     border: 60px solid rgba(0, 0, 0, 0.404);
     flex-direction: column;
+
 }
 
 #instr-title {

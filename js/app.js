@@ -60,7 +60,7 @@ const guessInputEl = document.getElementById("guess-input")
 
 const instructsPageEl = document.getElementById("instructions-page")
 
-const exitButtonEl = document.getElementById("exit", exitInstructions)
+const exitButtonEl = document.getElementById("exit")
 
 
 
@@ -75,10 +75,13 @@ submitButtonEl.addEventListener("click", submitHandleClick)
 guessButtonEl.addEventListener("click", guessName)
 inputEl.addEventListener("click", removeInvalidText)
 instructsButtonEl.addEventListener("click", displayInstructions)
-exitButtonEl.addEventListener("click", )
+exitButtonEl.addEventListener("click", exitInstructions)
 
 
 /*-------------------------------- Functions --------------------------------*/
+
+init()
+
 
 function init(){
     winner = false
@@ -88,7 +91,7 @@ function init(){
     render()
     clueCount()
 }
-init()
+
 
 function render(){
     assignCards()
@@ -288,8 +291,9 @@ function removeInputValue(){
 
 function displayInstructions(){
     instructsPageEl.removeAttribute("hidden")
+    
 }
 
 function exitInstructions(){
-    instructsPageEl.setAttribute("hidden")
+    instructsPageEl.setAttribute("hidden", "")
 }
