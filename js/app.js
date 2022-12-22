@@ -141,6 +141,7 @@ function submitHandleClick(){
 }
 
 function checkInput(){
+    inputElLowerCase = inputEl.value.toLowerCase
     if (inputEl.value.includes(unknownCharacter.gender) && inputEl.value.includes(`${Object.keys(unknownCharacter)[2]}`) && inputEl.value.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES`
