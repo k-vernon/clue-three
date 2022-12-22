@@ -29,9 +29,9 @@ Click the reset button to start a new game!</p>
 
 <br>
 
-- [] Light/Dark Mode
-- [] Add more characters
-- [] Add more options for questions
-- [] Add animation to characters (blinking, applauding, booing)
-- [] Start Screen
-- [] Card Shuffle Animation
+- [ ] Light/Dark Mode
+- [ ] Add more characters
+- [ ] Add more options for questions
+- [ ] Add animation to characters (blinking, applauding, booing)
+- [ ] Start Screen
+- [ ] Card Shuffle Animation
