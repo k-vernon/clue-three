@@ -91,17 +91,18 @@ function init(){
     clueCount()
 }
 
+function reset(){
+    init()
+    removeInputValue()
+    resetGameResult()
+}
+
 function render(){
     assignCards()
     assignUnknownCard()
     removeInvalidText()
 }
 
-function reset(){
-    init()
-    removeInputValue()
-    resetGameResult()
-}
 
 function submitHandleClick(){
     checkInput()
