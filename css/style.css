@@ -28,6 +28,7 @@ body > div {
     transform: translate(-50%, -50%);
 }
 
+
 #header {
     display: flex;
     flex-direction: row;
@@ -334,6 +335,34 @@ form {
     border: none;
     font-size: 20px;
     cursor: pointer;
+}
+#instructions-page {
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    background-color: rgb(229, 229, 229);
+    top: -800px;
+    left: -1000px;
+    border: 60px solid rgba(0, 0, 0, 0.404);
+}
+
+#instr-title {
+    display: flex;
+    font-size: 100px;
+    justify-content: center;
+    text-align: center;
+    margin: 100px 0px 0px 0px;
+    color: rgb(113, 113, 113);
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
+#instr-top {
+    text-align: center;
+    font-size: 30px;
 }
 
 
