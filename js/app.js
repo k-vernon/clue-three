@@ -250,6 +250,7 @@ function guessName(){
     inputEl.disabled = true
     inputEl.style.cursor = "not-allowed"
     submitButtonEl.disabled = true
+    submitButtonEl.style.backgroundColor = "rgb(238, 238, 238)"
     submitButtonEl.style.cursor = "not-allowed"
     guessInputEl.removeAttribute("hidden")
     guessButtonEl.removeEventListener("click", guessName)
@@ -288,6 +289,11 @@ function removeInputValue(){
 
 }
 
+function resetClueMsgs(){
+    clueMessageEls
+}
+console.log(clueMessageEls[0].value)
+
 
 function displayInstructions(){
     instructsPageEl.removeAttribute("hidden")
@@ -297,3 +303,5 @@ function displayInstructions(){
 function exitInstructions(){
     instructsPageEl.setAttribute("hidden", "")
 }
+
+
