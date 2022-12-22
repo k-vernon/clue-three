@@ -251,8 +251,20 @@ function guessName(){
     submitButtonEl.style.cursor = "not-allowed"
     guessInputEl.removeAttribute("hidden")
     guessButtonEl.removeEventListener("click", guessName)
-    guessButtonEl.addEventListener("click", console.log("hey"))
+    guessButtonEl.addEventListener("click", checkGuessInput)
 }
 
+
+
+function checkGuessInput (){
+    if (unknownCharacter.name === guessInputEl.value){
+        messageEl.textContent = "YOU WIN"
+        subMessageEl.textContent = "You should be a detective!"
+    } else 
+        messageEl.textContent = "YOU LOSE"
+        subMessageEl.textContent = ""
+
+}
+console.log(unknownCharacter.name)
 
 
