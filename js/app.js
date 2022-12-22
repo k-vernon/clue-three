@@ -129,7 +129,7 @@ function clueCount(){
         clues = 1
     } else {
         clues = 0
-        // guessName()
+        guessName()
     }
     clueCountEl.textContent = clues
 }
@@ -258,12 +258,12 @@ function guessName(){
 
 function checkGuessInput (){
     if (unknownCharacter.name === guessInputEl.value){
-        messageEl.textContent = "YOU WIN"
+        messageEl.textContent = "YOU WIN" 
         subMessageEl.textContent = "You should be a detective!"
-    } else 
+    } else {
         messageEl.textContent = "YOU LOSE"
-        subMessageEl.textContent = ""
-
+        subMessageEl.textContent = "Use your clues more wisely!"
+    }
 }
 console.log(unknownCharacter.name)
 
