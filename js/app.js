@@ -147,7 +147,10 @@ function unknownCharacterPick(){
 }
 
 function assignUnknownCard(){
-    unknownEl.textContent = unknownCharacter.name
+    unknownEl.textContent = unknownCharacter.name      
+    unknownEl.style.backgroundImage = `url(${unknownCharacter.imgFile})`
+    unknownEl.style.backgroundSize = "cover"
+    unknownEl.style.backgroundPosition = "center"
 }
 
 function clueCount(){
