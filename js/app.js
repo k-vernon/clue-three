@@ -137,7 +137,8 @@ function clueCount(){
 function submitHandleClick(){
     checkInput()
     clueCount()
-    inputEl.innerHTML = ""
+    invalidEl.value = ''
+
 }
 
 function checkInput(){
@@ -200,7 +201,6 @@ function checkInput(){
         }
     } else {
         checkFormat()
-        console.log("NOPE")
 
     }
 }
