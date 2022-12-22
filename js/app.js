@@ -60,6 +60,8 @@ const guessInputEl = document.getElementById("guess-input")
 
 const instructsPageEl = document.getElementById("instructions-page")
 
+const exitButtonEl = document.getElementById("exit", exitInstructions)
+
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -73,6 +75,7 @@ submitButtonEl.addEventListener("click", submitHandleClick)
 guessButtonEl.addEventListener("click", guessName)
 inputEl.addEventListener("click", removeInvalidText)
 instructsButtonEl.addEventListener("click", displayInstructions)
+exitButtonEl.addEventListener("click", )
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -284,6 +287,9 @@ function removeInputValue(){
 
 
 function displayInstructions(){
-    console.log("clicked")
     instructsPageEl.removeAttribute("hidden")
+}
+
+function exitInstructions(){
+    instructsPageEl.setAttribute("hidden")
 }
