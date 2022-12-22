@@ -20,3 +20,15 @@ Clue Three is a character guessing game based off of Guess Who! The object of th
 <br>
 - Git
 <p>
+
+---
+## Ice Box
+---
+<br>
+
+- [] Light/Dark Mode
+- [] Add more characters
+- [] Add more options for questions
+- [] Add animation to characters (blinking, applauding, booing)
+- [] Start Screen
+- [] Card Shuffle Animation
