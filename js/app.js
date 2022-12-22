@@ -206,14 +206,33 @@ function checkInput(){
 
 function checkFormat(){
     
+    console.log(inputEl.value)
+    console.log(characterKeys)
+    console.log(characterKeys.includes(inputEl.value))
+    
     if (!inputEl.value.includes("?")){
         invalidEl.textContent = `Invalid input. Must include "?"`
-    } else if (!inputEl.value.includes(characterKeys)){
+    } else if (){
         invalidEl.textContent = `Invalid input. Must include a valid trait`
     } else {
         clueMessageEls[0].textContent = `${inputEl.value} NO`
     }
 }
+
+function heckIfAnyStringIncluded()
+
+
+// Get the input ("blue eyes?")
+// Take away question mark ("blue eyes")
+// Break up the string into array using split on spaces (["blue", "eyes"])
+// Create boolean value for whether or not it's included (isIncluded = false)
+// Iterate through array 
+// On each iteration check if the value is in characterKeys array (charcterKeys.includes(value))
+// If it was included then isIncluded = true
+// After iteration is done, return isIncluded 
+// If all is a helper function then call inside checkFormat fuction 
+//else if (checkIfAnyStringIncludedInMainArray(inputEl.value)){}
+
 
 function guessName(){
     inputEl.disabled = true
