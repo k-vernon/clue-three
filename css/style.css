@@ -241,6 +241,7 @@ body > div {
     width: 500px;
     height: 270px;
     margin: 0px 130px 0px 0px;
+    padding: 60px 0px 0px 0px;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -249,6 +250,9 @@ body > div {
 #clue-count {
     display: flex;
     font-size: 100px;
+    justify-content: center;
+    align-items: center;
+
     
 }
 
