@@ -162,6 +162,7 @@ body > div {
     font-size: 25px;
     font-weight: bolder;
     cursor: pointer;
+    margin: 20px 0px 0px 0px;
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133);
     
 }
