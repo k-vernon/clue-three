@@ -82,7 +82,6 @@ exitButtonEl.addEventListener("click", exitInstructions)
 
 init()
 
-
 function init(){
     winner = false
     clues = 3
@@ -92,10 +91,22 @@ function init(){
     clueCount()
 }
 
-
 function render(){
     assignCards()
     assignUnknownCard()
+    removeInvalidText()
+}
+
+function reset(){
+    init()
+    removeInputValue()
+    resetGameResult()
+}
+
+function submitHandleClick(){
+    checkInput()
+    clueCount()
+    removeInputValue()
 }
 
 function shuffleCharacters(){
@@ -127,11 +138,6 @@ function assignUnknownCard(){
     unknownEl.textContent = unknownCharacter.name
 }
 
-function reset(){
-    init()
-    removeInputValue()
-}
-
 function clueCount(){
     if (clueMessageEls[0].textContent === ""){
         clues = 3
@@ -144,12 +150,6 @@ function clueCount(){
         guessName()
     }
     clueCountEl.textContent = clues
-}
-
-function submitHandleClick(){
-    checkInput()
-    clueCount()
-    removeInputValue()
 }
 
 function checkInput(){
@@ -278,22 +278,16 @@ function checkGuessInput (){
 }
 // FIX THIS TO REMOVE INVALID MESSAGE AFTER IT POPS UP
 function removeInvalidText(){
-    console.log(inputEl.value)
     if (inputEl.value !== ''){
         invalidEl.textContent = ''
     }
 }
 
+
 function removeInputValue(){
     inputEl.value = ''
 
 }
-
-function resetClueMsgs(){
-    clueMessageEls
-}
-console.log(clueMessageEls[0].value)
-
 
 function displayInstructions(){
     instructsPageEl.removeAttribute("hidden")
@@ -304,4 +298,8 @@ function exitInstructions(){
     instructsPageEl.setAttribute("hidden", "")
 }
 
+function resetGameResult(){
+    messageEl.textContent = ""
+    subMessageEl.textContent = ""
+}
 
