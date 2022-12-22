@@ -73,7 +73,7 @@ cardEls.forEach(function(card){
 resetButtonEl.addEventListener("click", reset)
 submitButtonEl.addEventListener("click", submitHandleClick)
 guessButtonEl.addEventListener("click", guessName)
-inputEl.addEventListener("click", removeInvalidText)
+// inputEl.addEventListener("click", removeInvalidText)
 instructsButtonEl.addEventListener("click", displayInstructions)
 exitButtonEl.addEventListener("click", exitInstructions)
 
@@ -88,19 +88,22 @@ function init(){
     shuffledCharacters = shuffleCharacters()
     unknownCharacter = unknownCharacterPick()
     render()
-    clueCount()
+    removeInputValue()
+    resetGameResult()
+    enableButtons()
+    invalidEl.textContent = ''
+
 }
 
 function reset(){
     init()
-    removeInputValue()
-    resetGameResult()
+
 }
 
-function render(){
+function render(){    
+    clueCount()
     assignCards()
     assignUnknownCard()
-    removeInvalidText()
 }
 
 
@@ -251,14 +254,35 @@ function guessName(){
     inputEl.disabled = true
     inputEl.style.cursor = "not-allowed"
     submitButtonEl.disabled = true
+    guessButtonEl.style.backgroundColor = ""
     submitButtonEl.style.backgroundColor = "rgb(238, 238, 238)"
     submitButtonEl.style.cursor = "not-allowed"
+    guessButtonEl. disabled = false
+    guessInputEl.disabled = false
+    guessButtonEl.style.cursor = "pointer"
+    guessInputEl.style.cursor = "pointer"
     guessInputEl.removeAttribute("hidden")
     guessButtonEl.removeEventListener("click", guessName)
     guessButtonEl.addEventListener("click", checkGuessInput)
     guessButtonEl.style.animationPlayState = "running"
     messageEl.textContent = "TAKE YOUR GUESS!"
     subMessageEl.textContent = "Choose wisely! You have one chance!"
+}
+
+function enableButtons (){
+    inputEl.disabled = false
+    inputEl.style.cursor = "auto"
+    submitButtonEl.disabled = false
+    submitButtonEl.style.cursor = "pointer"
+    guessInputEl.setAttribute("hidden", "")
+    guessButtonEl.addEventListener("click", guessName)
+    guessButtonEl.style.cursor = "pointer"
+    guessButtonEl.disabled = false
+    guessButtonEl.style.animationPlayState = ""
+    guessButtonEl.style.backgroundColor = ""
+
+
+
 }
 
 function checkGuessInput (){
@@ -275,14 +299,15 @@ function checkGuessInput (){
     guessButtonEl.style.cursor = "not-allowed"
     guessInputEl.disabled = true
     guessInputEl.style.cursor = "not-allowed"
-    guessButtonEl.style.animationPlayState = "paused"
+    guessButtonEl.style.backgroundColor = "rgb(238, 238, 238)"
+    guessButtonEl.style.animationPlayState = ""
 }
-// FIX THIS TO REMOVE INVALID MESSAGE AFTER IT POPS UP
-function removeInvalidText(){
-    if (inputEl.value !== ''){
-        invalidEl.textContent = ''
-    }
-}
+// // FIX THIS TO REMOVE INVALID MESSAGE AFTER IT POPS UP
+// function removeInvalidText(){
+//     if (inputEl.value !== ''){
+//         invalidEl.textContent = ''
+//     }
+// }
 
 
 function removeInputValue(){
@@ -300,7 +325,7 @@ function exitInstructions(){
 }
 
 function resetGameResult(){
-    messageEl.textContent = ""
-    subMessageEl.textContent = ""
+    messageEl.textContent = ''
+    subMessageEl.textContent = ''
 }
 
