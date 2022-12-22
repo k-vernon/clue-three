@@ -338,6 +338,11 @@ form {
     font-size: 20px;
     cursor: pointer;
 }
+
+.footer-button:hover {
+    background-color: rgb(223, 223, 223);
+}
+
 #instructions-page {
     position: absolute;
     width: 2000px;
@@ -381,6 +386,11 @@ h1 {
     transform: translate(-50%, -50%);
     cursor: pointer;
     border: none;
+}
+
+.btn:hover {
+    background-color: rgb(223, 223, 223);
+
 }
 
 
