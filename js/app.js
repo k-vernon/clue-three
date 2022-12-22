@@ -257,7 +257,11 @@ function guessName(){
 
 
 function checkGuessInput (){
-    if (unknownCharacter.name === guessInputEl.value){
+    guessInputElLowerCase = guessInputEl.value.toLowerCase()
+    unknownCharacterLowercase = unknownCharacter.name.toLowerCase()
+    console.log(guessInputElLowerCase)
+    console.log(unknownCharacterLowercase)
+    if (unknownCharacterLowercase === guessInputElLowerCase){
         messageEl.textContent = "YOU WIN" 
         subMessageEl.textContent = "You should be a detective!"
     } else {
@@ -265,6 +269,5 @@ function checkGuessInput (){
         subMessageEl.textContent = "Use your clues more wisely!"
     }
 }
-console.log(unknownCharacter.name)
 
 
