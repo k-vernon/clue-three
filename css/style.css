@@ -178,6 +178,7 @@ body > div {
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133);
     animation: pulse 2s infinite;
     animation-play-state: paused;
+    border: none;
 }
 
 @keyframes pulse {

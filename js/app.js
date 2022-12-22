@@ -58,6 +58,8 @@ const resetButtonEl = document.getElementById("reset")
 
 const guessInputEl = document.getElementById("guess-input")
 
+const instructsPageEl = document.getElementById("instructions-page")
+
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -70,6 +72,7 @@ resetButtonEl.addEventListener("click", reset)
 submitButtonEl.addEventListener("click", submitHandleClick)
 guessButtonEl.addEventListener("click", guessName)
 inputEl.addEventListener("click", removeInvalidText)
+instructsButtonEl.addEventListener("click", displayInstructions)
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -212,7 +215,7 @@ function checkFormat(){
     if (!inputElLowerCase.includes("?")){
         invalidEl.textContent = `Invalid input. Must include "?"`
     } else if (!checkIfInputContainsKey(inputElLowerCase)){
-        invalidEl.textContent = `Invalid input. Must include a valid trait`
+        invalidEl.textContent = `Invalid input. Must include a valid trait.`
     } else {
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} NO!`
@@ -266,7 +269,7 @@ function checkGuessInput (){
     guessInputEl.style.cursor = "not-allowed"
     guessButtonEl.style.animationPlayState = "paused"
 }
-
+// FIX THIS TO REMOVE INVALID MESSAGE AFTER IT POPS UP
 function removeInvalidText(){
     console.log(inputEl.value)
     if (inputEl.value !== ''){
@@ -274,8 +277,13 @@ function removeInvalidText(){
     }
 }
 
-
 function removeInputValue(){
     inputEl.value = ''
 
+}
+
+
+function displayInstructions(){
+    console.log("clicked")
+    instructsPageEl.removeAttribute("hidden")
 }
