@@ -252,6 +252,8 @@ function guessName(){
     guessInputEl.removeAttribute("hidden")
     guessButtonEl.removeEventListener("click", guessName)
     guessButtonEl.addEventListener("click", checkGuessInput)
+    messageEl.textContent = "TAKE YOUR GUESS!"
+    subMessageEl.textContent = "Choose wisely! You have one chance!"
 }
 
 
@@ -259,8 +261,6 @@ function guessName(){
 function checkGuessInput (){
     guessInputElLowerCase = guessInputEl.value.toLowerCase()
     unknownCharacterLowercase = unknownCharacter.name.toLowerCase()
-    console.log(guessInputElLowerCase)
-    console.log(unknownCharacterLowercase)
     if (unknownCharacterLowercase === guessInputElLowerCase){
         messageEl.textContent = "YOU WIN" 
         subMessageEl.textContent = "You should be a detective!"
@@ -268,6 +268,10 @@ function checkGuessInput (){
         messageEl.textContent = "YOU LOSE"
         subMessageEl.textContent = "Use your clues more wisely!"
     }
+    guessButtonEl.disabled = true
+    guessButtonEl.style.cursor = "not-allowed"
+    guessInputEl.disabled = true
+    guessInputEl.style.cursor = "not-allowed"
 }
 
 

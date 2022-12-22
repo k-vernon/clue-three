@@ -126,6 +126,7 @@ body > div {
     align-self: center;
     margin: 0px 0px 40px 0px;
     padding: 60px 0px;
+    text-align: center;
 }
 
 #game-result {
