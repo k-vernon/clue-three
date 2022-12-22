@@ -150,7 +150,16 @@ body > div {
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133);
 }
 
-
+#guess-button {
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
 
 #guess-input {
     width: 200px;
