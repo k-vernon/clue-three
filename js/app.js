@@ -302,12 +302,10 @@ function checkGuessInput (){
     guessButtonEl.style.backgroundColor = "rgb(238, 238, 238)"
     guessButtonEl.style.animationPlayState = ""
 }
-// // FIX THIS TO REMOVE INVALID MESSAGE AFTER IT POPS UP
-// function removeInvalidText(){
-//     if (inputEl.value !== ''){
-//         invalidEl.textContent = ''
-//     }
-// }
+// FIX THIS TO REMOVE INVALID MESSAGE AFTER IT POPS UP
+function removeInvalidText(){
+    invalidEl.textContent = ''
+}
 
 
 function removeInputValue(){
