@@ -141,8 +141,8 @@ function submitHandleClick(){
 }
 
 function checkInput(){
-    inputElLowerCase = inputEl.value.toLowerCase
-    if (inputEl.value.includes(unknownCharacter.gender) && inputEl.value.includes(`${Object.keys(unknownCharacter)[2]}`) && inputEl.value.includes("?")){
+    inputElLowerCase = inputEl.value.toLowerCase()
+    if (inputElLowerCase.includes(unknownCharacter.gender) && inputElLowerCase.includes(`${Object.keys(unknownCharacter)[2]}`) && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES`
         } else if (clues === 2){
@@ -150,7 +150,7 @@ function checkInput(){
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES`
         }
-    } else if (unknownCharacter.bald === false && inputEl.value.includes(unknownCharacter.hair) && inputEl.value.includes(`${Object.keys(unknownCharacter)[3]}`) && inputEl.value.includes("?")){
+    } else if (unknownCharacter.bald === false && inputElLowerCase.includes(unknownCharacter.hair) && inputElLowerCase.includes(`${Object.keys(unknownCharacter)[3]}`) && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES`
         } else if (clues === 2){
@@ -158,7 +158,7 @@ function checkInput(){
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES`
         }
-    } else if (inputEl.value.includes(unknownCharacter.eyes) && inputEl.value.includes(`${Object.keys(unknownCharacter)[4]}`) && inputEl.value.includes("?")){
+    } else if (inputElLowerCase.includes(unknownCharacter.eyes) && inputElLowerCase.includes(`${Object.keys(unknownCharacter)[4]}`) && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES`
         } else if (clues === 2){
@@ -166,7 +166,7 @@ function checkInput(){
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES`
         }
-    } else if (inputEl.value.includes(`${Object.keys(unknownCharacter)[5]}`) && unknownCharacter.glasses === true && inputEl.value.includes("?")){
+    } else if (inputElLowerCase.includes(`${Object.keys(unknownCharacter)[5]}`) && unknownCharacter.glasses === true && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES`
         } else if (clues === 2){
@@ -174,7 +174,7 @@ function checkInput(){
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES`
         }
-    } else if (inputEl.value.includes("facial hair") && unknownCharacter.facialHair === true && inputEl.value.includes("?")){
+    } else if (inputElLowerCase.includes("facial hair") && unknownCharacter.facialHair === true && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES`
         } else if (clues === 2){
@@ -182,7 +182,7 @@ function checkInput(){
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES`
         }
-    } else if (inputEl.value.includes(`${Object.keys(unknownCharacter)[7]}`) && unknownCharacter.bald === true && inputEl.value.includes("?")){
+    } else if (inputElLowerCase.includes(`${Object.keys(unknownCharacter)[7]}`) && unknownCharacter.bald === true && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES`
         } else if (clues === 2){
@@ -190,7 +190,7 @@ function checkInput(){
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES`
         }
-    } else if (inputEl.value.includes(`${Object.keys(unknownCharacter)[8]}`) && unknownCharacter.jewelry === true && inputEl.value.includes("?")){
+    } else if (inputElLowerCase.includes(`${Object.keys(unknownCharacter)[8]}`) && unknownCharacter.jewelry === true && inputElLowerCase.value.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES`
         } else if (clues === 2){
@@ -206,15 +206,10 @@ function checkInput(){
 }
 
 function checkFormat(){
-    
-    console.log(inputEl.value)
-    console.log(characterKeys)
-
-    console.log(checkIfAnyStringIncluded(inputEl.value))
-    
-    if (!inputEl.value.includes("?")){
+    inputElLowerCase = inputEl.value.toLowerCase()
+    if (!inputElLowerCase.includes("?")){
         invalidEl.textContent = `Invalid input. Must include "?"`
-    } else if (!checkIfAnyStringIncluded(inputEl.value)){
+    } else if (!checkIfAnyStringIncluded(inputElLowerCase)){
         invalidEl.textContent = `Invalid input. Must include a valid trait`
     } else {
         if (clues === 3){
@@ -237,10 +232,7 @@ function checkIfAnyStringIncluded(playerText){
             isIncluded = true
        }
     })
-    console.log(playerText)
-    console.log(isIncluded)
     return isIncluded
-
 }
 
 
