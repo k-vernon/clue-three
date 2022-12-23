@@ -121,6 +121,7 @@ body > div {
     align-items: flex-end;
     font-weight: bolder;
     color: #A8405D;
+    font-family: 'Urbanist', sans-serif;
     text-shadow:
        2px 2px 0 white,
      -1px -1px 0 white,  
@@ -215,6 +216,7 @@ body > div {
     z-index: 1;
     font-weight: bolder;
     color: #903750;
+    font-family: 'Urbanist', sans-serif;
     text-shadow:
        2px 2px 0 white,
      -1px -1px 0 white,  

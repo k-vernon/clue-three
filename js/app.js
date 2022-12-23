@@ -96,6 +96,7 @@ function init(){
     messageEl.textContent = "Unknown Character"
     messageEl.style.fontFamily = "'Urbanist', sans-serif"
     messageEl.style.textDecoration = "underline"
+    messageEl.style.textShadow = "2px 1px 2px rgba(0, 0, 0, 0.133)"
     invalidEl.textContent = ''
 
 }
