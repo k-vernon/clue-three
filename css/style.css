@@ -406,7 +406,7 @@ form {
     font-size: 100px;
     justify-content: center;
     text-align: center;
-    margin: 100px 0px 0px 0px;
+    margin: 150px 0px 0px 0px;
     color: rgb(113, 113, 113);
 }
 
@@ -418,6 +418,7 @@ h1 {
 #instr-top {
     text-align: center;
     font-size: 30px;
+    margin: 0px 300px 0px 300px;
 }
 
 #exit {
@@ -428,7 +429,7 @@ h1 {
     position: absolute;
     justify-content: center;
     align-items: center;
-    top: 50%;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
