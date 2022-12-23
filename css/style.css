@@ -177,7 +177,7 @@ body > div {
     font-size: 25px;
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133);
     cursor: not-allowed;
-    z-index: 10;
+    z-index: 1;
 }
 
 #unknown-back-card {
@@ -186,10 +186,10 @@ body > div {
     background-size: cover;
     background-position: center;
     width: 200px;
-    height: 230px;
+    height: 232px;
     position: fixed;
     cursor: not-allowed;
-    margin: 162px 0px 0px 0px;
+    margin: 159px 0px 0px 0px;
     z-index: 8;
     align-self: center;
     justify-content: center;
@@ -250,6 +250,7 @@ body > div {
     text-align: center;
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133);
     border: 1px solid rgba(0, 0, 0, 0.5);
+    z-index: 10;
 
 }
 
