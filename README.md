@@ -1,7 +1,7 @@
 
 
 # <p style="font-size: 40px;">Clue Three</p>
-
+## <p style= "text-align: center;"> [Play The Game](https://clue-three.netlify.app/)</p>
 ![Clue Three Image](https://i.imgur.com/8pBiWBV.png)
 
 <p>Clue Three is a guessing game based on Guess Who! The object of the game is to guess the Unknown Character that is randomly chosen from the character group. Each character has a specific list of traits that make them unique. For example, Bella has brown hair while Ashley has black hair. <br><br> To correctly guess the Unknown Character, players have the option to type questions about them in the input at the bottom of the board! After typing and submitting a question, the game will add a clue to the clue box, answering with "Yes!" or "No!" to the player's question. For example, if the player asks "Brown hair?" and the Unknown Character does not have brown hair, a clue reading "Brown hair? No!"
