@@ -235,12 +235,15 @@ body > div {
     align-self: center;
     justify-content: center;
     font-size: 25px;
-    font-weight: bolder;
+    font-weight:600;
     cursor: pointer;
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133);
     animation: pulse 2s infinite;
     animation-play-state: paused;
     border: none;
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 2px;
+    
 }
 
 @keyframes pulse {
@@ -314,8 +317,7 @@ body > div {
     justify-content: center;
     align-items: center;
     color: #A8405D;
-
-    
+    font-family: 'Urbanist', sans-serif;
 }
 
 #clue-message {
@@ -325,7 +327,8 @@ body > div {
     flex-direction: column;
     text-align: center;
     color: #A8405D;
-    font-weight: bolder;
+    font-weight: 600;
+    font-family: 'Urbanist', sans-serif;
 }
 
 
@@ -393,6 +396,9 @@ form {
     cursor: pointer;
     background-color: #A8405D;
     color: white;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    
 }
 
 #submit:hover{
@@ -420,6 +426,9 @@ form {
     cursor: pointer;
     background-color: #A8405D;
     color: white;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
     
 }
 
