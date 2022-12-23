@@ -380,6 +380,7 @@ function checkGuessInput (){
         subMessageEl.textContent = "Use your clues more wisely!"
         winner = false
         unknownEl.style.zIndex = "3"
+        messageEl.style.animationPlayState = "running"
         playLoseSound()
     }
     guessButtonEl.disabled = true
