@@ -33,6 +33,7 @@ let unknownCharacter
 /*------------------------ Cached Element References ------------------------*/
 
 const cardEls = document.querySelectorAll(".card")
+console.log(cardEls)
 
 const unknownEl = document.getElementById("unknown-card")
 
@@ -67,7 +68,7 @@ const exitButtonEl = document.getElementById("exit")
 /*----------------------------- Event Listeners -----------------------------*/
 
 cardEls.forEach(function(card){
-    card.addEventListener("click", flipCard)
+    card.addEventListener("click", console.log)
 })
 resetButtonEl.addEventListener("click", reset)
 submitButtonEl.addEventListener("click", submitHandleClick)
@@ -127,11 +128,9 @@ function shuffleCharacters(){
 function assignCards(){
     shuffledCharacters.forEach(function(character, charIdx){ 
        cardEls[charIdx].textContent = character.name
-        console.log()
+
     })
     shuffledCharacters.forEach(function(character, charIdx){
-        console.log(cardEls[charIdx]);
-        console.log(character.imgFile)
         cardEls[charIdx].style.backgroundImage = `url(${character.imgFile})`
         cardEls[charIdx].style.backgroundSize = "cover"
         cardEls[charIdx].style.backgroundPosition = "center"
@@ -151,12 +150,6 @@ function assignUnknownCard(){
     unknownEl.style.backgroundSize = "cover"
     unknownEl.style.backgroundPosition = "center"
 }
-
-
-function flipCard(){
-
-}
-
 
 
 
@@ -323,7 +316,6 @@ function checkGuessInput (){
     guessButtonEl.style.backgroundColor = "rgb(238, 238, 238)"
     guessButtonEl.style.animationPlayState = ""
 }
-// FIX THIS TO REMOVE INVALID MESSAGE AFTER IT POPS UP
 function removeInvalidText(){
     invalidEl.textContent = ''
 }

@@ -91,6 +91,7 @@ body > div {
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
+    
 }
 
 #up-left-back-cards, #bot-left-back-cards{
@@ -111,13 +112,14 @@ body > div {
     font-size: 25px;
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133);
     cursor: pointer;
+    align-items: flex-end;
 }
 
-.back-card {
+/* .back-card {
     background-image: url('../../assets/back.png');
     background-size: cover;
     background-position: center;
-}
+} */
 
 #right {
     display: flex;
