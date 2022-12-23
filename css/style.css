@@ -367,7 +367,7 @@ form {
 
 #input {
     display: flex;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 2px solid #A8405D;
     border-radius: 0px;
     width: 0px;
     height: 40px;
@@ -387,9 +387,14 @@ form {
     height: 40px;
     margin-top: 25px;
     margin-right: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid #A8405D;
     cursor: pointer;
+    background-color: #A8405D;
+    color: white;
+}
 
+#submit:hover{
+    background-color: #903750;
 }
 
 #foot-right {
@@ -411,11 +416,13 @@ form {
     border: none;
     font-size: 20px;
     cursor: pointer;
+    background-color: #A8405D;
+    color: white;
 }
 
 
 .footer-button:hover {
-    background-color: rgb(223, 223, 223);
+    background-color: #903750;
 }
 
 #instructions-page {
@@ -465,8 +472,13 @@ h1 {
     border: none;
 }
 
+.btn {
+    background-color: #A8405D;
+    color: white;
+}
+
 .btn:hover {
-    background-color: rgb(223, 223, 223);
+    background-color: #903750;
 
 }
 
