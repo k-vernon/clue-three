@@ -171,14 +171,12 @@ body > div {
     font-size: 25px;
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133);
     cursor: not-allowed;
-    /* position: absolute; */
-    /* z-index: 10; */
+    z-index: 10;
 }
 
 #unknown-back-card {
     display: flex;
     background-image: url('../../assets/back.png');
-    /* background-color: red; */
     background-size: cover;
     background-position: center;
     width: 200px;
@@ -186,7 +184,6 @@ body > div {
     position: fixed;
     cursor: not-allowed;
     margin: 162px 0px 0px 0px;
-    /* margin: 0px 0px 0px 0px; */
     z-index: 8;
     align-self: center;
     justify-content: center;

@@ -2,16 +2,16 @@
 
 /*-------------------------------- Constants --------------------------------*/
 const charactersData = [
-    { number: 1, name: "Amour", gender: "guy", hair: "black", eyes:"green", glasses: false, facialHair: false, bald: false, jewelry: true, imgFile: './assets/face.jpeg'},
-    { number: 2, name: "Ashley", gender: "girl", hair: "black", eyes:"blue", glasses: false, facialHair: false, bald: false, jewelry: true, imgFile: './assets/face.jpeg'},
-    { number: 3, name: "Bella", gender: "girl", hair: "brown", eyes:"brown", glasses: false, facialHair: false, bald: false, jewelry: false, imgFile: './assets/face.jpeg'},
-    { number: 4, name: "Ember", gender: "girl", hair: "red", eyes:"green", glasses: false, facialHair: false, bald: false, jewelry: true, imgFile: './assets/face.jpeg'},
-    { number: 5, name: "Khalil", gender: "guy", hair: "black", eyes:"brown", glasses: false, facialHair: false, bald: false, jewelry: true, imgFile: './assets/face.jpeg'},
-    { number: 6, name: "Olivia", gender: "girl", hair: "brown", eyes:"blue", glasses: true, facialHair: false, bald: false, jewelry: false, imgFile: './assets/face.jpeg'},
-    { number: 7, name: "Phoebe", gender: "girl", hair: "blonde", eyes:"blue", glasses: false, facialHair: false, bald: false, jewelry: false, imgFile: './assets/face.jpeg'},
-    { number: 8, name: "Pierre", gender: "guy", hair: "blonde", eyes:"blue", glasses: false, facialHair: true, bald: false, jewelry: false, imgFile: './assets/face.jpeg'},
-    { number: 9, name: "Tony", gender: "guy", hair: "black", eyes:"brown", glasses: true, facialHair: false, bald: false, jewelry: false, imgFile: './assets/face.jpeg'},
-    { number: 10, name: "Zeke", gender: "guy", hair: "red", eyes:"green", glasses: false, facialHair: true, bald: true, jewelry: true, imgFile: './assets/face.jpeg'}
+    { number: 1, name: "Amour", gender: "guy", hair: "black", eyes:"green", glasses: false, facialHair: false, bald: false, jewelry: true, imgFile: './assets/amour.png'},
+    { number: 2, name: "Ashley", gender: "girl", hair: "black", eyes:"blue", glasses: false, facialHair: false, bald: false, jewelry: true, imgFile: './assets/ashley.png'},
+    { number: 3, name: "Bella", gender: "girl", hair: "brown", eyes:"brown", glasses: false, facialHair: false, bald: false, jewelry: false, imgFile: './assets/bella.png'},
+    { number: 4, name: "Ember", gender: "girl", hair: "red", eyes:"green", glasses: false, facialHair: false, bald: false, jewelry: true, imgFile: './assets/ember.png'},
+    { number: 5, name: "Khalil", gender: "guy", hair: "black", eyes:"brown", glasses: false, facialHair: false, bald: false, jewelry: true, imgFile: './assets/khalil.png'},
+    { number: 6, name: "Olivia", gender: "girl", hair: "brown", eyes:"blue", glasses: true, facialHair: false, bald: false, jewelry: false, imgFile: './assets/olivia.png'},
+    { number: 7, name: "Phoebe", gender: "girl", hair: "blonde", eyes:"blue", glasses: false, facialHair: false, bald: false, jewelry: false, imgFile: './assets/phoebe.png'},
+    { number: 8, name: "Pierre", gender: "guy", hair: "blonde", eyes:"blue", glasses: false, facialHair: true, bald: false, jewelry: false, imgFile: './assets/pierre.png'},
+    { number: 9, name: "Tony", gender: "guy", hair: "black", eyes:"brown", glasses: true, facialHair: false, bald: false, jewelry: false, imgFile: './assets/tony.png'},
+    { number: 10, name: "Zeke", gender: "guy", hair: "red", eyes:"green", glasses: false, facialHair: true, bald: true, jewelry: true, imgFile: './assets/zeke.png'}
  
 ]
 
