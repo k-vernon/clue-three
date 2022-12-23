@@ -121,7 +121,7 @@ body > div {
     font-weight: bolder;
     color: #A8405D;
     text-shadow:
-       3px 3px 0 white,
+       2px 2px 0 white,
      -1px -1px 0 white,  
       1px -1px 0 white,
       -1px 1px 0 white,
@@ -189,9 +189,9 @@ body > div {
     cursor: not-allowed;
     z-index: 1;
     font-weight: bolder;
-    color: rgb(77, 77, 77);
+    color: #903750;
     text-shadow:
-       3px 3px 0 white,
+       2px 2px 0 white,
      -1px -1px 0 white,  
       1px -1px 0 white,
       -1px 1px 0 white,
@@ -305,6 +305,7 @@ body > div {
     border: 3px solid #CEE297;;
     border-radius: 40px;
     justify-self: center;
+    
 }
 
 #clue-count {
@@ -419,6 +420,7 @@ form {
     cursor: pointer;
     background-color: #A8405D;
     color: white;
+    
 }
 
 
