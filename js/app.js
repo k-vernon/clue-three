@@ -33,7 +33,6 @@ let unknownCharacter
 /*------------------------ Cached Element References ------------------------*/
 
 const cardEls = document.querySelectorAll(".card")
-console.log(cardEls)
 
 const unknownEl = document.getElementById("unknown-card")
 
@@ -77,6 +76,7 @@ submitButtonEl.addEventListener("click", submitHandleClick)
 guessButtonEl.addEventListener("click", guessName)
 instructsButtonEl.addEventListener("click", displayInstructions)
 exitButtonEl.addEventListener("click", exitInstructions)
+
 
 
 
@@ -144,11 +144,11 @@ function playZeroCluesSound(){
     zeroCluesSound.play()
 }
 
-
 function submitHandleClick(){
     checkInput()
     clueCount()
     removeInputValue()
+    
 }
 
 function shuffleCharacters(){
@@ -390,10 +390,10 @@ function checkGuessInput (){
     guessButtonEl.style.backgroundColor = "rgb(238, 238, 238)"
     guessButtonEl.style.animationPlayState = "" 
 }
+
 function removeInvalidText(){
     invalidEl.textContent = ''
 }
-
 
 function removeInputValue(){
     inputEl.value = ''
