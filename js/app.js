@@ -45,6 +45,8 @@ const clueMessageEls = document.querySelectorAll(".clue")
 
 const clueCountEl = document.getElementById("clue-count")
 
+const clueCountMessageEl = document.getElementById("clue-message")
+
 const invalidEl = document.getElementById("invalid")
 
 const inputEl = document.getElementById("input")
@@ -91,6 +93,7 @@ function init(){
     removeInputValue()
     resetGameResult()
     enableButtons()
+
     invalidEl.textContent = ''
 
 }
@@ -136,7 +139,7 @@ function playNoClueSound(){
 
 function playZeroCluesSound(){
     let zeroCluesSound = new Audio("./assets/zero-clues.mp3")
-    zeroCluesSound.volume = 0.5
+    zeroCluesSound.volume = 0.3
     zeroCluesSound.play()
 }
 
@@ -195,6 +198,10 @@ function clueCount(){
         clues = 1
     } else {
         clues = 0
+        clueCountEl.style.animationPlayState = "running"
+        clueCountEl.style.color = "lightGrey"
+        clueCountMessageEl.style.color = "lightGrey"
+
         playZeroCluesSound()
         guessName()
     }
