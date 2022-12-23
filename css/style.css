@@ -165,11 +165,14 @@ body > div {
 #game-result {
     font-size: 40px;
     padding: 0px 0px 15px 0px;
+    color: #A8405D;
+    font-weight: bolder;
     
 }
 
 #sub-result {
     font-size: 20px;
+    color: #A8405D;
 }
 
 #unknown-card {
@@ -298,6 +301,7 @@ body > div {
     font-size: 100px;
     justify-content: center;
     align-items: center;
+    color: #A8405D;
 
     
 }
@@ -308,6 +312,7 @@ body > div {
     margin: 0px 0px 90px 0px;
     flex-direction: column;
     text-align: center;
+    color: #A8405D;
 }
 
 

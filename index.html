@@ -71,7 +71,7 @@
                 <form>
                 <div id="invalid"></div>
                 <input type="text" id="input" onclick="removeInvalidText();">
-                    <button class="btn" type="button" id="submit">Submit</button>
+                    <button class="btn" type="button" id="submit" onsubmit="submitHandleClick();">Submit</button>
                 </input>
                 </form>
             </div>
@@ -83,7 +83,7 @@
             </div>
             <div id="foot-right">
                 <button id="instructionsbtn" class="footer-button" >Instructions</button>
-                <button id="reset" class="footer-button">Reset</button>
+                <button id="reset" class="footer-button" onClick="window.location.reload()">Reset</button>
             </div>
         </section>
     </div>

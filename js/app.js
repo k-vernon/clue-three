@@ -96,7 +96,7 @@ function init(){
 }
 
 function reset(){
-    init()
+    // init()
 
 }
 
