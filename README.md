@@ -22,7 +22,12 @@ Click the reset button to start a new game!</p>
 - JavaScript
 <br>
 - Git
+<br>
+-Adobe Illustrator
+<br>
+-Adobe Photoshop
 <p>
+
 
 ## Credits
 - [Font: Urbanist](https://fonts.google.com/specimen/Urbanist)
