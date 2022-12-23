@@ -24,6 +24,11 @@ Click the reset button to start a new game!</p>
 - Git
 <p>
 
+## Credits
+- [Urbanist Font](https://fonts.google.com/specimen/Urbanist)
+- [Sounds from Envato](https://elements.envato.com/sound-effects)
+
+
 #
 ## Ice Box
 
