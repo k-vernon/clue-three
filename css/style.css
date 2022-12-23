@@ -378,7 +378,7 @@ form {
     border-radius: 0px;
     width: 0px;
     height: 40px;
-    margin: 25px 0px 10px 255px;
+    margin: 25px 10px 10px 255px;
     justify-content: end;
     background-color: white;
     flex-direction: row;
@@ -393,7 +393,7 @@ form {
     width: 100px;
     height: 40px;
     margin-top: 25px;
-    margin-right: 100px;
+    margin-right: 150px;
     border: 1px solid #A8405D;
     cursor: pointer;
     background-color: #A8405D;
