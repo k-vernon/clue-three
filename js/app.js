@@ -52,7 +52,7 @@ const submitButtonEl = document.getElementById("submit")
 
 const guessButtonEl = document.getElementById("guess-button")
 
-const instructsButtonEl = document.getElementById("instructions")
+const instructsButtonEl = document.getElementById("instructionsbtn")
 
 const resetButtonEl = document.getElementById("reset")
 
@@ -67,15 +67,14 @@ const exitButtonEl = document.getElementById("exit")
 /*----------------------------- Event Listeners -----------------------------*/
 
 cardEls.forEach(function(card){
-    card.addEventListener("click", console.log)
+    card.addEventListener("click", flipCard)
 })
-
 resetButtonEl.addEventListener("click", reset)
 submitButtonEl.addEventListener("click", submitHandleClick)
 guessButtonEl.addEventListener("click", guessName)
-// inputEl.addEventListener("click", removeInvalidText)
 instructsButtonEl.addEventListener("click", displayInstructions)
 exitButtonEl.addEventListener("click", exitInstructions)
+
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -152,6 +151,15 @@ function assignUnknownCard(){
     unknownEl.style.backgroundSize = "cover"
     unknownEl.style.backgroundPosition = "center"
 }
+
+
+function flipCard(){
+    
+}
+
+
+
+
 
 function clueCount(){
     if (clueMessageEls[0].textContent === ""){
