@@ -25,7 +25,7 @@ Click the reset button to start a new game!</p>
 <p>
 
 ## Credits
-- [Urbanist Font](https://fonts.google.com/specimen/Urbanist)
+- [Font: Urbanist](https://fonts.google.com/specimen/Urbanist)
 - [Sounds from Envato](https://elements.envato.com/sound-effects)
 
 
