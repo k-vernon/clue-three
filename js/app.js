@@ -109,7 +109,7 @@ function render(){
 function playWinSound(){
     let winSound = new Audio("./assets/win-sound.mp3")
     if(winner === true){
-        winSound.volume = 0.3
+        winSound.volume = 0.5
         winSound.play()
     }
 }
@@ -117,17 +117,28 @@ function playWinSound(){
 function playLoseSound(){
     let loseSound = new Audio("./assets/lose-sound.mp3")
     if(winner === false){
-        loseSound.volume = 0.3
+        loseSound.volume = 0.5
         loseSound.play()
     }
 }
 
-function playNewClueSound(){
-    let newClueSound = new Audio("./assets/newclue.mp3")
-    newClueSound.volume = 0.3
-    newClueSound.play()
+function playYesClueSound(){
+    let yesClueSound = new Audio("./assets/yes-clue.mp3")
+    yesClueSound.volume = 0.5
+    yesClueSound.play()
 }
 
+function playNoClueSound(){
+    let noClueSound = new Audio("./assets/no-clue.mp3")
+    noClueSound.volume = 0.5
+    noClueSound.play()
+}
+
+function playZeroCluesSound(){
+    let zeroCluesSound = new Audio("./assets/zero-clues.mp3")
+    zeroCluesSound.volume = 0.5
+    zeroCluesSound.play()
+}
 
 
 function submitHandleClick(){
@@ -184,6 +195,7 @@ function clueCount(){
         clues = 1
     } else {
         clues = 0
+        playZeroCluesSound()
         guessName()
     }
     clueCountEl.textContent = clues
@@ -194,58 +206,79 @@ function checkInput(){
     if (inputElLowerCase.includes(unknownCharacter.gender) && inputElLowerCase.includes(`${Object.keys(unknownCharacter)[2]}`) && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 2){
             clueMessageEls[1].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         }
     } else if (unknownCharacter.bald === false && inputElLowerCase.includes(unknownCharacter.hair) && inputElLowerCase.includes(`${Object.keys(unknownCharacter)[3]}`) && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 2){
             clueMessageEls[1].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         }
     } else if (inputElLowerCase.includes(unknownCharacter.eyes) && inputElLowerCase.includes(`${Object.keys(unknownCharacter)[4]}`) && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 2){
             clueMessageEls[1].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         }
     } else if (inputElLowerCase.includes(`${Object.keys(unknownCharacter)[5]}`) && unknownCharacter.glasses === true && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 2){
             clueMessageEls[1].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         }
     } else if (inputElLowerCase.includes("facial hair") && unknownCharacter.facialHair === true && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 2){
             clueMessageEls[1].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         }
     } else if (inputElLowerCase.includes(`${Object.keys(unknownCharacter)[7]}`) && unknownCharacter.bald === true && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 2){
             clueMessageEls[1].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         }
     } else if (inputElLowerCase.includes(`${Object.keys(unknownCharacter)[8]}`) && unknownCharacter.jewelry === true && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 2){
             clueMessageEls[1].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES!`
+            playYesClueSound()
         }
     } else {
         checkFormat()
@@ -264,17 +297,17 @@ function checkFormat(){
             clueMessageEls[0].textContent = `${inputEl.value} NO!`
             clueMessageEls[0].style.color = "#EF60A3"
             clueMessageEls[0].style.border = "2px solid #EF60A3"
-            playNewClueSound()
+            playNoClueSound()
         } else if (clues === 2){
             clueMessageEls[1].textContent = `${inputEl.value} NO!`
             clueMessageEls[1].style.color = "#EF60A3"
             clueMessageEls[1].style.border = "2px solid #EF60A3"
-            playNewClueSound()
+            playNoClueSound()
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} NO!`
             clueMessageEls[2].style.color = "#EF60A3"
             clueMessageEls[2].style.border = "2px solid #EF60A3"
-            playNewClueSound()
+            playNoClueSound()
         }
     }
 
