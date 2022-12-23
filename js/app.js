@@ -106,7 +106,7 @@ function render(){
     assignUnknownCard()
 }
 
-function playWinSound (){
+function playWinSound(){
     let winSound = new Audio("./assets/win-sound.mp3")
     if(winner === true){
         winSound.volume = 0.3
@@ -114,7 +114,7 @@ function playWinSound (){
     }
 }
 
-function playLoseSound (){
+function playLoseSound(){
     let loseSound = new Audio("./assets/lose-sound.mp3")
     if(winner === false){
         loseSound.volume = 0.3
@@ -122,6 +122,11 @@ function playLoseSound (){
     }
 }
 
+function playNewClueSound(){
+    let newClueSound = new Audio("./assets/newclue.mp3")
+    newClueSound.volume = 0.3
+    newClueSound.play()
+}
 
 
 
@@ -248,8 +253,6 @@ function checkInput(){
     }
 }
 
-console.log(`${Object.keys(unknownCharacter)[8]}`)
-
 function checkFormat(){
     inputElLowerCase = inputEl.value.toLowerCase()
     if (!inputElLowerCase.includes("?")){
@@ -261,14 +264,17 @@ function checkFormat(){
             clueMessageEls[0].textContent = `${inputEl.value} NO!`
             clueMessageEls[0].style.color = "#EF60A3"
             clueMessageEls[0].style.border = "2px solid #EF60A3"
+            playNewClueSound()
         } else if (clues === 2){
             clueMessageEls[1].textContent = `${inputEl.value} NO!`
             clueMessageEls[1].style.color = "#EF60A3"
             clueMessageEls[1].style.border = "2px solid #EF60A3"
+            playNewClueSound()
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} NO!`
             clueMessageEls[2].style.color = "#EF60A3"
             clueMessageEls[2].style.border = "2px solid #EF60A3"
+            playNewClueSound()
         }
     }
 

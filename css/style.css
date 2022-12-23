@@ -275,6 +275,7 @@ body > div {
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133);
     border: 1px solid rgba(0, 0, 0, 0.5);
     z-index: 10;
+    background-color: whit;
 
 }
 
