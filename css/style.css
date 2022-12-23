@@ -63,7 +63,8 @@ body > div {
     font-size: 50px;
     margin: 10px 700px 0px 0px;
     background-image: url('../../assets/clue3logo.png');
-    background-size: cover;
+    background-size: 450px;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -202,8 +203,9 @@ body > div {
     display: flex;
     background-image: url('../../assets/question.png');
     background-color: white;
-    background-size: cover;
+    background-size: 150px;
     background-position: center;
+    background-repeat: no-repeat;
     width: 202px;
     height: 232px;
     position: fixed;
