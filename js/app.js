@@ -114,6 +114,15 @@ function playWinSound (){
     }
 }
 
+function playLoseSound (){
+    let loseSound = new Audio("./assets/lose-sound.mp3")
+    if(winner === false){
+        loseSound.volume = 0.3
+        loseSound.play()
+    }
+}
+
+
 
 
 function submitHandleClick(){
@@ -324,6 +333,7 @@ function checkGuessInput (){
         subMessageEl.textContent = "Use your clues more wisely!"
         winner = false
         unknownEl.style.zIndex = "3"
+        playLoseSound()
     }
     guessButtonEl.disabled = true
     guessButtonEl.style.cursor = "not-allowed"
