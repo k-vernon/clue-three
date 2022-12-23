@@ -34,7 +34,7 @@ let unknownCharacter
 
 const cardEls = document.querySelectorAll(".card")
 
-const unknownEl = document.getElementById("unknown")
+const unknownEl = document.getElementById("unknown-card")
 
 const messageEl = document.getElementById("game-result")
 
@@ -154,7 +154,7 @@ function assignUnknownCard(){
 
 
 function flipCard(){
-    
+
 }
 
 
