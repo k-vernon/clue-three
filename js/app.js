@@ -128,6 +128,7 @@ function shuffleCharacters(){
 function assignCards(){
     shuffledCharacters.forEach(function(character, charIdx){ 
        cardEls[charIdx].textContent = character.name
+       
 
     })
     shuffledCharacters.forEach(function(character, charIdx){
