@@ -72,7 +72,7 @@ body > div {
 }
 
 
-#up-left {
+#up-left-cards {
     display: flex;
     border: 1px solid rgba(231, 123, 255, 0.1);
     width: 1150px;
@@ -82,7 +82,7 @@ body > div {
     align-items: center;
 }
 
-#bot-left {
+#bot-left-cards {
     display: flex;
     border: 1px solid rgba(231, 123, 255, 0.1);
     width: 1150px;
@@ -92,7 +92,7 @@ body > div {
     align-items: center;
 }
 
-.card {
+.card, .back-card {
     display: flex;
     background-color: rgb(230, 230, 230);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -103,6 +103,20 @@ body > div {
     font-size: 25px;
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133);
     cursor: pointer;
+}
+
+#up-left-back-cards, #bot-left-back-cards{
+    position: fixed;
+    justify-content: space-evenly;
+    width: 1150px;
+    z-index: 12;
+    display: flex;
+}
+
+.back-card {
+    background-image: url('../../assets/back.png');
+    background-size: cover;
+    background-position: center;
 }
 
 #right {
