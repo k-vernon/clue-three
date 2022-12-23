@@ -95,6 +95,7 @@ function init(){
     enableButtons()
     messageEl.textContent = "Unknown Character"
     messageEl.style.fontFamily = "'Urbanist', sans-serif"
+    messageEl.style.textDecoration = "underline"
     invalidEl.textContent = ''
 
 }

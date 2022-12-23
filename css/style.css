@@ -143,7 +143,7 @@ body > div {
     flex-direction: column;
     align-content: center;
     justify-content: flex-start;
-    background-color: rgb(247, 237, 220););
+    background-color: rgb(247, 237, 220);
     
 }
 
@@ -167,7 +167,7 @@ body > div {
 #game-result {
     font-size: 40px;
     padding: 0px 0px 15px 0px;
-    color: #A8405D;
+    color: #EF60A3;
     font-weight: bolder;
     animation: anim-popoutin 2s 2 1s;
     font-family: 'Urbanist', sans-serif;
