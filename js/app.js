@@ -219,7 +219,7 @@ function checkInput(){
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} YES!`
         }
-    } else if (inputElLowerCase.includes(`${Object.keys(unknownCharacter)[8]}`) && unknownCharacter.jewelry === true && inputElLowerCase.value.includes("?")){
+    } else if (inputElLowerCase.includes(`${Object.keys(unknownCharacter)[8]}`) && unknownCharacter.jewelry === true && inputElLowerCase.includes("?")){
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} YES!`
         } else if (clues === 2){
@@ -232,6 +232,8 @@ function checkInput(){
 
     }
 }
+
+console.log(`${Object.keys(unknownCharacter)[8]}`)
 
 function checkFormat(){
     inputElLowerCase = inputEl.value.toLowerCase()

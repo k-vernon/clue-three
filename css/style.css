@@ -188,6 +188,14 @@ body > div {
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133);
     cursor: not-allowed;
     z-index: 1;
+    font-weight: bolder;
+    color: rgb(77, 77, 77);
+    text-shadow:
+       3px 3px 0 white,
+     -1px -1px 0 white,  
+      1px -1px 0 white,
+      -1px 1px 0 white,
+       1px 1px 0 white;
 }
 
 #unknown-back-card {
