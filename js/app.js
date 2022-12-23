@@ -106,6 +106,15 @@ function render(){
     assignUnknownCard()
 }
 
+function playWinSound (){
+    let winSound = new Audio("./assets/win-sound.mp3")
+    if(winner === true){
+        winSound.volume = 0.3
+        winSound.play()
+    }
+}
+
+
 
 function submitHandleClick(){
     checkInput()
@@ -151,9 +160,6 @@ function assignUnknownCard(){
     unknownEl.style.backgroundSize = "cover"
     unknownEl.style.backgroundPosition = "center"
 }
-
-
-
 
 function clueCount(){
     if (clueMessageEls[0].textContent === ""){
@@ -312,6 +318,7 @@ function checkGuessInput (){
         subMessageEl.textContent = "You should be a detective!"
         winner = true
         unknownEl.style.zIndex = "3"
+        playWinSound()
     } else {
         messageEl.textContent = "YOU LOSE"
         subMessageEl.textContent = "Use your clues more wisely!"
