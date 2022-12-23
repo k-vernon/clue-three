@@ -474,32 +474,29 @@ form {
 }
 
 #instructions-page {
-    display: flex;
     position: absolute;
+    width: 1000px;
+    height: 1000px;
     background-color: rgb(229, 229, 229);
+    top: -500px;
+    left: -500px;
     border: 60px solid rgba(0, 0, 0, 0.404);
     flex-direction: column;
-    position: absolute; 
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 1000px; 
-}
 
+}
 
 #instr-title {
     display: flex;
-    font-size: 80px;
+    font-size: 60px;
     justify-content: center;
     text-align: center;
-    margin: 150px 0px 0px 0px;
+    margin: 15px 0px 0px 0px;
     color: rgb(113, 113, 113);
 }
 
 h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 #instr-top {
@@ -516,7 +513,7 @@ h1 {
     position: absolute;
     justify-content: center;
     align-items: center;
-    top: 58%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
