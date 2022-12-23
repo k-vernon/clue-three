@@ -244,10 +244,16 @@ function checkFormat(){
     } else {
         if (clues === 3){
             clueMessageEls[0].textContent = `${inputEl.value} NO!`
+            clueMessageEls[0].style.color = "#EF60A3"
+            clueMessageEls[0].style.border = "2px solid #EF60A3"
         } else if (clues === 2){
             clueMessageEls[1].textContent = `${inputEl.value} NO!`
+            clueMessageEls[0].style.color = "#EF60A3"
+            clueMessageEls[0].style.border = "2px solid #EF60A3"
         } else if (clues === 1){
             clueMessageEls[2].textContent = `${inputEl.value} NO!`
+            clueMessageEls[0].style.color = "#EF60A3"
+            clueMessageEls[0].style.border = "2px solid #EF60A3"
         }
     }
 
