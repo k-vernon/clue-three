@@ -10,11 +10,13 @@ html {
 }
   
 body {
-    background-color:rgb(234, 234, 234);
+    background-color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     margin: 0;
     justify-content: center;
+    
+
 }
 
 body > div {
@@ -26,6 +28,9 @@ body > div {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+ 
+    
+    
 }
 
 
@@ -39,25 +44,27 @@ body > div {
     width: 1550px;
     margin: 0px 0px 0px 0px;
     padding-left: 300px;
+    background-color: white
 }
 
 #board {
     display: flex;
     flex-direction: column;
-    box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133)
-    
-    
+    /* box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133); */
 }
 
 #title {
     display: flex;
     background-color: rgb(255, 255, 255);
-    height: 100px;
+    height: 130px;
     width: 600px;
     align-items: center;
     justify-content: center;
     font-size: 50px;
-    margin: 0px 700px 0px 0px;
+    margin: 10px 700px 0px 0px;
+    background-image: url('../../assets/clue3logo.png');
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -182,10 +189,11 @@ body > div {
 
 #unknown-back-card {
     display: flex;
-    background-image: url('../../assets/back.png');
+    background-image: url('../../assets/question.png');
+    background-color: white;
     background-size: cover;
     background-position: center;
-    width: 200px;
+    width: 202px;
     height: 232px;
     position: fixed;
     cursor: not-allowed;

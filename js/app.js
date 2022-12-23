@@ -128,7 +128,7 @@ function shuffleCharacters(){
 function assignCards(){
     shuffledCharacters.forEach(function(character, charIdx){ 
        cardEls[charIdx].textContent = character.name
-       
+
 
     })
     shuffledCharacters.forEach(function(character, charIdx){
@@ -293,9 +293,7 @@ function enableButtons (){
     guessButtonEl.disabled = false
     guessButtonEl.style.animationPlayState = ""
     guessButtonEl.style.backgroundColor = ""
-
-
-
+    unknownEl.style.zIndex = "1"
 }
 
 function checkGuessInput (){
@@ -305,17 +303,19 @@ function checkGuessInput (){
         messageEl.textContent = "YOU WIN" 
         subMessageEl.textContent = "You should be a detective!"
         winner = true
+        unknownEl.style.zIndex = "3"
     } else {
         messageEl.textContent = "YOU LOSE"
         subMessageEl.textContent = "Use your clues more wisely!"
         winner = false
+        unknownEl.style.zIndex = "3"
     }
     guessButtonEl.disabled = true
     guessButtonEl.style.cursor = "not-allowed"
     guessInputEl.disabled = true
     guessInputEl.style.cursor = "not-allowed"
     guessButtonEl.style.backgroundColor = "rgb(238, 238, 238)"
-    guessButtonEl.style.animationPlayState = ""
+    guessButtonEl.style.animationPlayState = "" 
 }
 function removeInvalidText(){
     invalidEl.textContent = ''
