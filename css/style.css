@@ -169,7 +169,14 @@ body > div {
     font-size: 40px;
     padding: 0px 0px 15px 0px;
     color: #EF60A3;
-    font-weight: bolder;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow:
+    1px 1px 0 #A8405D,
+  -1px -1px 0 #A8405D,  
+   1px -1px 0 #A8405D,
+   -1px 1px 0 #A8405D,
+    1px 1px 0 #A8405D;
     animation: anim-popoutin 2s 2 1s;
     font-family: 'Urbanist', sans-serif;
     animation-play-state: paused;
