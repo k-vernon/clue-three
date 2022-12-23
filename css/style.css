@@ -474,20 +474,23 @@ form {
 }
 
 #instructions-page {
+    display: flex;
     position: absolute;
-    width: 2000px;
-    height: 2000px;
     background-color: rgb(229, 229, 229);
-    top: -800px;
-    left: -1000px;
     border: 60px solid rgba(0, 0, 0, 0.404);
     flex-direction: column;
-
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 1000px; 
 }
+
 
 #instr-title {
     display: flex;
-    font-size: 100px;
+    font-size: 80px;
     justify-content: center;
     text-align: center;
     margin: 150px 0px 0px 0px;
@@ -496,12 +499,12 @@ form {
 
 h1 {
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 #instr-top {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0px 300px 0px 300px;
 }
 
