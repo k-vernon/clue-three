@@ -93,7 +93,8 @@ function init(){
     removeInputValue()
     resetGameResult()
     enableButtons()
-
+    messageEl.textContent = "Unknown Character"
+    messageEl.style.fontFamily = "'Urbanist', sans-serif"
     invalidEl.textContent = ''
 
 }

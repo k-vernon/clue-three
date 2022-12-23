@@ -161,6 +161,7 @@ body > div {
     padding: 60px 0px;
     text-align: center;
     position: relative;
+    font-family: 'Urbanist', sans-serif;
 }
 
 #game-result {
@@ -169,6 +170,7 @@ body > div {
     color: #A8405D;
     font-weight: bolder;
     animation: anim-popoutin 2s 2 1.5s;
+    font-family: 'Urbanist', sans-serif;
     
 }
 @keyframes anim-popoutin {
