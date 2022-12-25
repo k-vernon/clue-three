@@ -68,9 +68,9 @@ const exitButtonEl = document.getElementById("exit")
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-cardEls.forEach(function(card){
-    card.addEventListener("click", console.log)
-})
+// cardEls.forEach(function(card){
+//     card.addEventListener("click", console.log)
+// })
 resetButtonEl.addEventListener("click", reset)
 submitButtonEl.addEventListener("click", submitHandleClick)
 guessButtonEl.addEventListener("click", guessName)
