@@ -492,16 +492,20 @@ form {
     border: 30px solid rgba(0, 0, 0, 0.404);
     border-radius: 70px;
     flex-direction: column;
+    
 
 }
 
 #instr-title {
     display: flex;
-    font-size: 60px;
+    font-size: 50px;
     justify-content: center;
     text-align: center;
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0px 20px 0px;
+    padding: 10px 10px;
     color: rgb(113, 113, 113);
+    border-bottom: 4px solid grey;
+
 }
 
 
@@ -531,6 +535,16 @@ h1 {
     flex-direction: column;
     align-items: center;
 
+}
+
+#instr-goal, #instr-how-to {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#instr-examples {
+    margin: 0px 0px 0px 0px;
 }
 
 #exit {
