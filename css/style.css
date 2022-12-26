@@ -88,7 +88,6 @@ body > div {
 
 #bot-left-cards {
     display: flex;
-   
     width: 1150px;
     height: 260px;
     justify-content: space-evenly;
@@ -237,6 +236,7 @@ body > div {
     background-size: 150px;
     background-position: center;
     background-repeat: no-repeat;
+    border: 2px solid #CEE297;
     width: 202px;
     height: 232px;
     position: fixed;
@@ -388,10 +388,7 @@ body > div {
     box-shadow: 2px 1px 10px rgba(45, 28, 35, 0.133);
     font-weight: bolder;
     color: #A8405D;
-
 }
-
-
 
 form {
     display: flex;
@@ -412,7 +409,6 @@ form {
     color: red;
     font-size: 20px;
     opacity: 50%;
-    
 }
 
 #input {
@@ -430,6 +426,10 @@ form {
     padding: 10px 10px;
     align-items: center;
     align-content: center;
+}
+
+#input::placeholder{
+    opacity: 30%;
 }
 
 #submit {
@@ -564,7 +564,7 @@ h1 {
     position: absolute;
     justify-content: center;
     align-items: center;
-    top: 90%;
+    top: 93%;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
