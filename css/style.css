@@ -485,13 +485,13 @@ form {
     position: absolute;
     width: 1000px;
     height: 1000px;
-    background-color: rgb(229, 229, 229);
+    background-color: rgb(248, 242, 232);
     top: -500px;
     left: -500px;
     border: 10px solid #903750;
     border-radius: 70px;
     flex-direction: column;
-    box-shadow: 2px 1px 10px rgba(45, 28, 35, 0.133);
+    box-shadow: 3px 2px 5px rgba(45, 28, 35, 0.757);
     
 }
 

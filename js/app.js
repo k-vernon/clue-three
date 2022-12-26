@@ -144,6 +144,13 @@ function playZeroCluesSound(){
     zeroCluesSound.play()
 }
 
+function playInstructionsToggleSound(){
+    let instructionsSound = new Audio ("./assets/instructions.mp3")
+    instructionsSound.volume = 0.4
+    instructionsSound.play()
+}
+
+
 function submitHandleClick(){
     checkInput()
     clueCount()
@@ -402,11 +409,12 @@ function removeInputValue(){
 
 function displayInstructions(){
     instructsPageEl.removeAttribute("hidden")
-    
+    playInstructionsToggleSound()
 }
 
 function exitInstructions(){
     instructsPageEl.setAttribute("hidden", "")
+    playInstructionsToggleSound()
 }
 
 function resetGameResult(){
