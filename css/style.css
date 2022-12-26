@@ -489,7 +489,8 @@ form {
     background-color: rgb(229, 229, 229);
     top: -500px;
     left: -500px;
-    border: 60px solid rgba(0, 0, 0, 0.404);
+    border: 30px solid rgba(0, 0, 0, 0.404);
+    border-radius: 70px;
     flex-direction: column;
 
 }
@@ -499,19 +500,37 @@ form {
     font-size: 60px;
     justify-content: center;
     text-align: center;
-    margin: 15px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
     color: rgb(113, 113, 113);
 }
+
 
 h1 {
     text-align: center;
     font-size: 40px;
+    padding: 20px 20px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
 }
 
 #instr-top {
+    display: flex;
     text-align: center;
     font-size: 20px;
-    margin: 0px 300px 0px 300px;
+    margin: 0px 150px 0px 150px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#instr-1 {
+    margin: 0px 0px 0px 0px;
+}
+
+#instr-bot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 #exit {
@@ -522,7 +541,7 @@ h1 {
     position: absolute;
     justify-content: center;
     align-items: center;
-    top: 85%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
