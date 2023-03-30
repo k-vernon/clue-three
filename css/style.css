@@ -107,7 +107,7 @@ body > div {
 .card, .back-card {
     display: flex;
     background-color:rgb(248, 242, 232); 
-    border: 2px solid #CEE297;
+    border: 2px solid #EF60A3;
     border-radius: 7px;
     width: 160px;
     height: 200px;
@@ -219,6 +219,7 @@ body > div {
     cursor: not-allowed;
     z-index: 1;
     font-weight: bolder;
+    border-radius: 7px;
     color: #903750;
     font-family: 'Urbanist', sans-serif;
     text-shadow:
@@ -246,7 +247,7 @@ body > div {
     align-self: center;
     justify-content: center;
     align-items: flex-start;
-
+    border-radius: 7px;
 }
 
 #guess-button {
@@ -337,7 +338,7 @@ body > div {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border: 3px solid #CEE297;;
+    border: 3px solid #CEE297;
     border-radius: 40px;
     justify-self: center;
     
@@ -377,7 +378,7 @@ body > div {
 
 .clue {
     display: flex;
-    border: 2px solid #A8405D;
+    border: 2px solid #CEE297;
     background-color: rgb(248, 242, 232);
     border-radius: 70px;
     width: 500px;

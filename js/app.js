@@ -344,6 +344,7 @@ function guessName(){
     inputEl.disabled = true
     inputEl.style.cursor = "not-allowed"
     submitButtonEl.disabled = true
+
     guessButtonEl.style.backgroundColor = ""
     submitButtonEl.style.backgroundColor = "rgb(238, 238, 238)"
     submitButtonEl.style.cursor = "not-allowed"
@@ -394,6 +395,7 @@ function checkGuessInput (){
     guessButtonEl.style.cursor = "not-allowed"
     guessInputEl.disabled = true
     guessInputEl.style.cursor = "not-allowed"
+    
     guessButtonEl.style.backgroundColor = "rgb(238, 238, 238)"
     guessButtonEl.style.animationPlayState = "" 
 }
