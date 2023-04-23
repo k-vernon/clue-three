@@ -72,6 +72,7 @@ const exitButtonEl = document.getElementById("exit")
 //     card.addEventListener("click", console.log)
 // })
 resetButtonEl.addEventListener("click", reset)
+inputEl/addEventListener("keydown", submitHandleKeydown)
 submitButtonEl.addEventListener("click", submitHandleClick)
 guessButtonEl.addEventListener("click", guessName)
 instructsButtonEl.addEventListener("click", displayInstructions)
@@ -155,7 +156,13 @@ function submitHandleClick(){
     checkInput()
     clueCount()
     removeInputValue()
-    
+}
+
+function submitHandleKeydown(event){
+    if(event.key === "Enter"){
+        event.preventDefault()
+        submitHandleClick()
+    }
 }
 
 function shuffleCharacters(){

@@ -1,7 +1,17 @@
 html {
     box-sizing: border-box
 }
-  
+ 
+:root {
+    --primary-color: #A8405D;
+    --primary-dark-color: #903750;
+    --secondary-color: #CEE297;
+    --background-color: rgb(247, 237, 220);
+
+    --border-radius: 7px;
+
+}
+
 /* The Universal Selector */
 *, 
 *::before, 
@@ -10,50 +20,44 @@ html {
 }
   
 body {
-    background-color: rgb(247, 237, 220);
+    /* background-color: rgb(247, 237, 220); */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     margin: 0;
-    justify-content: center;
+    background-color: var(--background-color);
+
 
 }
 
-body > div {
+#board {
     display: flex;
-    background-color: rgb(247, 237, 220);;
+    flex-direction: column;
     height: 900px;
     width: 1550px;
     position: fixed;
+    justify-content: center;
+    align-items: center;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);    
-    
+    left: 50%; 
+    /* background-color: var(--background-color); */
+    transform: translate(-50%, -50%);
 }
-
 
 #header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(247, 237, 220);;
     height: 140px;
     width: 1550px;
     margin: 0px 0px 0px 0px;
     padding-left: 300px;
-    background-color: rgb(247, 237, 220);
 }
 
-#board {
-    display: flex;
-    flex-direction: column;
-   
-   
-}
 
 #title {
     display: flex;
-    background-color: rgb(247, 237, 220);;
+    /* background-color: rgb(247, 237, 220); */
     height: 130px;
     width: 600px;
     align-items: center;
@@ -73,19 +77,11 @@ body > div {
     flex-direction: row;
     height: 630px;
     width: 1550px;
+    /* background-color: #3f3f3f; */
 }
 
 
-#up-left-cards {
-    display: flex;
-    width: 1150px;
-    height: 260px;
-    justify-content: space-evenly;
-    align-content: center;
-    align-items: center;
-    
-}
-
+#up-left-cards,
 #bot-left-cards {
     display: flex;
     width: 1150px;
@@ -96,18 +92,11 @@ body > div {
     
 }
 
-#up-left-back-cards, #bot-left-back-cards{
-    position: fixed;
-    justify-content: space-evenly;
-    width: 1150px;
-    z-index: 12;
-    display: flex;
-}
 
-.card, .back-card {
+.card{
     display: flex;
     background-color:rgb(248, 242, 232); 
-    border: 2px solid #EF60A3;
+    border: 2px solid var(--secondary-color);
     border-radius: 7px;
     width: 160px;
     height: 200px;
@@ -128,11 +117,6 @@ body > div {
     
 }
 
-/* .back-card {
-    background-image: url('../../assets/back.png');
-    background-size: cover;
-    background-position: center;
-} */
 
 #right {
     display: flex;
@@ -141,13 +125,13 @@ body > div {
     flex-direction: column;
     align-content: center;
     justify-content: flex-start;
-    background-color: rgb(247, 237, 220);
+    /* background-color: rgb(247, 237, 220); */
     
 }
 
 #game-message {
     display: flex;
-    background-color: rgb(247, 237, 220);;
+    /* background-color: rgb(247, 237, 220); */
     height: 100px;
     width: 300px;
     align-items: center;
@@ -305,14 +289,14 @@ body > div {
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.133);
     border: 1px solid rgba(0, 0, 0, 0.5);
     z-index: 10;
-    background-color: whit;
+    background-color: white;
 
 }
 
 
 #footer {
     display: flex;
-    background-color:rgb(247, 237, 220);;
+    /* background-color:rgb(247, 237, 220);; */
     height: 350px;
     width: 1550px;
     flex-direction: row;
@@ -378,7 +362,7 @@ body > div {
 
 .clue {
     display: flex;
-    border: 2px solid #CEE297;
+    border: 2px solid var();
     background-color: rgb(248, 242, 232);
     border-radius: 70px;
     width: 500px;
