@@ -125,13 +125,11 @@ body {
     flex-direction: column;
     align-content: center;
     justify-content: flex-start;
-    /* background-color: rgb(247, 237, 220); */
     
 }
 
 #game-message {
     display: flex;
-    /* background-color: rgb(247, 237, 220); */
     height: 100px;
     width: 300px;
     align-items: center;
@@ -296,7 +294,6 @@ body {
 
 #footer {
     display: flex;
-    /* background-color:rgb(247, 237, 220);; */
     height: 350px;
     width: 1550px;
     flex-direction: row;
