@@ -468,8 +468,10 @@ form {
     width: 1000px;
     height: 1000px;
     background-color: rgb(248, 242, 232);
-    top: -500px;
-    left: -500px;
+    /* top: -500px;
+    left: -500px; */
+    top: -30em;
+    left: -40em;
     border: 10px solid #903750;
     border-radius: 70px;
     flex-direction: column;
