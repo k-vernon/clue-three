@@ -159,7 +159,7 @@ function submitHandleClick(){
 }
 
 function submitHandleKeydown(event){
-    if(event.key === "Enter"){
+    if(event.key === "Enter" && document.activeElement.tagName.toLowerCase() === 'input' ){
         event.preventDefault()
         submitHandleClick()
     }
